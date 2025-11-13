@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# 输出数据
+data/output/*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# MacOS
+.DS_Store
