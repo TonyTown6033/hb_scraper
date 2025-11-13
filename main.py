@@ -11,6 +11,7 @@ import json
 import re
 from bs4 import BeautifulSoup
 from typing import Dict, List, Any, Optional
+from translate import translate_main
 
 
 def handle_cookie_popup(driver, timeout=5):
@@ -25,9 +26,7 @@ def handle_cookie_popup(driver, timeout=5):
 
         for selector in selectors:
             try:
-                button = WebDriverWait(driver, timeout).until(
-                    EC.element_to_be_clickable((By.XPATH, selector))
-                )
+                button = WebDriverWait(driver, timeout).until(EC.element_to_be_clickable((By.XPATH, selector)))
                 button.click()
                 print("✓ 已接受 Cookie")
                 time.sleep(1)
@@ -56,9 +55,7 @@ def scrape_product_list(driver, url):
     # 等待产品卡片加载
     try:
         WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located(
-                (By.CSS_SELECTOR, '[data-testid="product-card"]')
-            )
+            EC.presence_of_element_located((By.CSS_SELECTOR, '[data-testid="product-card"]'))
         )
         print("✓ 产品列表已加载")
     except:
@@ -66,9 +63,7 @@ def scrape_product_list(driver, url):
         return []
 
     # 找到所有产品卡片
-    product_cards = driver.find_elements(
-        By.CSS_SELECTOR, '[data-testid="product-card"]'
-    )
+    product_cards = driver.find_elements(By.CSS_SELECTOR, '[data-testid="product-card"]')
     print(f"✓ 找到 {len(product_cards)} 个产品")
 
     products = []
@@ -83,36 +78,28 @@ def scrape_product_list(driver, url):
 
             # 产品品牌
             try:
-                brand_element = card.find_element(
-                    By.CSS_SELECTOR, ".ProductCard-module_productBrand__-rFtT"
-                )
+                brand_element = card.find_element(By.CSS_SELECTOR, ".ProductCard-module_productBrand__-rFtT")
                 product["brand"] = brand_element.text.strip()
             except:
                 product["brand"] = ""
 
             # 产品名称
             try:
-                title_element = card.find_element(
-                    By.CSS_SELECTOR, ".ProductCard-module_title__ytKYE"
-                )
+                title_element = card.find_element(By.CSS_SELECTOR, ".ProductCard-module_title__ytKYE")
                 product["name"] = title_element.text.strip()
             except:
                 product["name"] = ""
 
             # 产品价格
             try:
-                price_element = card.find_element(
-                    By.CSS_SELECTOR, ".MppProductCardPrice-module_price__bold__BpYBE"
-                )
+                price_element = card.find_element(By.CSS_SELECTOR, ".MppProductCardPrice-module_price__bold__BpYBE")
                 product["price"] = price_element.text.strip()
             except:
                 product["price"] = ""
 
             # 产品图片
             try:
-                image_element = card.find_element(
-                    By.CSS_SELECTOR, ".ProductCard-module_productImage__9bfwO"
-                )
+                image_element = card.find_element(By.CSS_SELECTOR, ".ProductCard-module_productImage__9bfwO")
                 product["image"] = image_element.get_attribute("src")
             except:
                 product["image"] = ""
@@ -153,9 +140,7 @@ def clean_html(html_text: str) -> str:
 def extract_product_json(html_content: str) -> Dict[str, Any]:
     """从HTML中提取产品JSON数据"""
     # 提取JSON数据
-    match = re.search(
-        r'<script id="__LAYOUT__"[^>]*>(.*?)</script>', html_content, re.DOTALL
-    )
+    match = re.search(r'<script id="__LAYOUT__"[^>]*>(.*?)</script>', html_content, re.DOTALL)
 
     if not match:
         print("  ✗ 未找到__LAYOUT__数据")
@@ -218,7 +203,9 @@ def scrape_product_detail(driver, url):
 
         # 用法服量
         directions = info_section.get("directions", {})
-        details["directions"] = f"{directions.get('heading', '')} {directions.get('text', '')}".strip()
+        heading = directions.get("heading", "")
+        text = directions.get("text", "")
+        details["directions"] = f"{heading} {text}".strip()
 
         # 配料表
         ingredients = info_section.get("otherIngredients", {})
@@ -238,9 +225,8 @@ def scrape_product_detail(driver, url):
                         nutritional_text.append(f"{nutrient}: {amount}")
         details["nutritional_info"] = "; ".join(nutritional_text)
 
-        # 产品类型和作用部位（从CSV模板来看需要这些字段，但JSON中可能没有直接对应）
+        # 作用部位（从CSV模板来看需要这些字段，但JSON中可能没有直接对应）
         # 暂时留空，后续可以根据实际需要补充
-        details["product_type"] = ""
         details["target_area"] = ""
 
         return details
@@ -279,9 +265,7 @@ def main():
         output_file = "data/output/products_basic.csv"
         if products:
             with open(output_file, "w", newline="", encoding="utf-8-sig") as f:
-                writer = csv.DictWriter(
-                    f, fieldnames=["brand", "name", "price", "image", "url"]
-                )
+                writer = csv.DictWriter(f, fieldnames=["brand", "name", "price", "image", "url"])
                 writer.writeheader()
                 writer.writerows(products)
             print(f"\n✓ 基本信息已保存到: {output_file}")
@@ -294,9 +278,7 @@ def main():
         if response.lower() == "y":
             # 询问爬取数量
             try:
-                max_count = input(
-                    f"要爬取多少个产品？(1-{len(products)}, 回车默认全部): "
-                ).strip()
+                max_count = input(f"要爬取多少个产品？(1-{len(products)}, 回车默认全部): ").strip()
                 if max_count:
                     max_products = min(int(max_count), len(products))
                 else:
@@ -325,7 +307,6 @@ def main():
                 "产品类型",
                 "作用部位",
                 "用法服量",
-                "知识科普",
                 "营养成分",
                 "配料表",
                 "URL",
@@ -346,7 +327,6 @@ def main():
                         "产品类型": product_type,
                         "作用部位": product.get("target_area", ""),
                         "用法服量": product.get("directions", ""),
-                        "知识科普": product.get("knowledge", ""),
                         "营养成分": product.get("nutritional_info", ""),
                         "配料表": product.get("ingredients", ""),
                         "URL": product.get("url", ""),
@@ -358,6 +338,7 @@ def main():
             print(f"✓ 共爬取 {max_products} 个产品的完整信息")
             print(f"{'=' * 60}")
 
+        translate_main()
     except KeyboardInterrupt:
         print("\n\n用户中断爬虫")
     except Exception as e:

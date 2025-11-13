@@ -6,6 +6,29 @@ readme = "README.md"
 requires-python = ">=3.11.13"
 dependencies = [
     "beautifulsoup4>=4.14.2",
+    "httpx[socks]>=0.28.1",
+    "openai>=2.7.2",
+    "pandas>=2.3.3",
     "selenium>=4.38.0",
     "webdriver-manager>=4.0.2",
 ]
+
+# 配置 black 格式化工具
+[tool.black]
+line-length = 120
+target-version = ['py311']
+skip-string-normalization = false
+
+# 配置 ruff 格式化工具
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# 配置 isort（导入排序）
+[tool.isort]
+profile = "black"
+line_length = 120
