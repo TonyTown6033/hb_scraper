@@ -319,16 +319,16 @@ def main():
                 for product in products[:max_products]:
                     row = {
                         "产品名称": product.get("name", ""),
-                        "产品亮点": product.get("highlights", ""),
                         "产品价格": product.get("price", ""),
-                        "产品品牌": product.get("brand", ""),
+                        "产品亮点": product.get("highlights", ""),
+                        "用法服量": product.get("directions", ""),
                         "产品图": product.get("image", ""),
-                        "产品描述": product.get("description", ""),
                         "产品类型": product_type,
                         "作用部位": product.get("target_area", ""),
-                        "用法服量": product.get("directions", ""),
-                        "营养成分": product.get("nutritional_info", ""),
                         "配料表": product.get("ingredients", ""),
+                        "产品品牌": product.get("brand", ""),
+                        "产品描述": product.get("description", ""),
+                        "营养成分": product.get("nutritional_info", ""),
                         "URL": product.get("url", ""),
                     }
                     writer.writerow(row)

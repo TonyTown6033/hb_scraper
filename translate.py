@@ -38,7 +38,7 @@ def translate_text(client, text, target_lang="中文", max_retries=3):
                 messages=[
                     {
                         "role": "system",
-                        "content": "你是一个专业的翻译助手，只翻译内容，不解释、不增删。保持原有的格式（如分号分隔）。",
+                        "content": "你是一个专业的翻译助手，只翻译内容，不解释、不增删。不保存街道地址，保持原有的格式（如分号分隔）。",
                     },
                     {"role": "user", "content": f"请将以下内容翻译为{target_lang}：\n{text}"},
                 ],
