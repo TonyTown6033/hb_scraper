@@ -149,3 +149,7 @@ def image_post_precessor():
     print("\n" + "=" * 70)
     print("全部完成！")
     print("=" * 70)
+
+
+if __name__ == "__main__":
+    image_post_precessor()

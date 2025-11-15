@@ -10,14 +10,14 @@ import time
 class ImageProcessor:
     """图片处理器：下载、居中处理、上传到图床"""
 
-    def __init__(self, api_url: str, token: str, target_size: tuple = (800, 800)):
+    def __init__(self, api_url: str, token: str, target_size: tuple = (800, 400)):
         """
         初始化图片处理器
 
         Args:
             api_url: EasyImage API 地址
             token: API token
-            target_size: 目标尺寸，默认 (800, 800)
+            target_size: 目标尺寸，默认 (800, 400) 横条形，适合竖长的药品瓶子
         """
         self.api_url = api_url
         self.token = token
@@ -67,7 +67,8 @@ class ImageProcessor:
             original_width, original_height = img.size
             target_width, target_height = self.target_size
 
-            # 计算缩放比例，使图片能够完全放入目标尺寸
+            # 等比例缩放，使图片完全放入目标尺寸
+            # 800x400 的横条形尺寸适合展示竖长的药品瓶子
             scale = min(target_width / original_width, target_height / original_height)
 
             # 计算新尺寸
