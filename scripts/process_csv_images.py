@@ -1,9 +1,14 @@
 """批量处理CSV文件中的图片"""
 
+import sys
 import csv
 import os
 from pathlib import Path
-from image_processor import ImageProcessor
+
+# 添加项目根目录到路径
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils.image_processor import ImageProcessor
 from tqdm import tqdm
 
 

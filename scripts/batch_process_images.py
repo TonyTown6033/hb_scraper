@@ -1,6 +1,11 @@
 """批量处理CSV文件中的图片 - 非交互式版本"""
+import sys
 from pathlib import Path
-from process_csv_images import process_csv_images
+
+# 添加项目根目录到路径
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from scripts.process_csv_images import process_csv_images
 
 
 def main():

@@ -11,12 +11,16 @@ import json
 import re
 from bs4 import BeautifulSoup
 from typing import Dict, List, Any, Optional
-from translate import translate_main
-from process_csv_images import image_post_precessor
+from utils.translate import translate_main
+from scripts.process_csv_images import image_post_precessor
+from utils.multi_page_scraper import scrape_all_pages
+from utils.logger import setup_logger, get_logger
+import logging
 
 
 def handle_cookie_popup(driver, timeout=5):
     """优雅地处理 Cookie 弹窗"""
+    logger = get_logger()
     try:
         # 尝试多种可能的 Cookie 接受按钮选择器
         selectors = [
@@ -256,7 +260,44 @@ def main():
         # 爬取产品列表
         list_url = "https://www.hollandandbarrett.com/shop/vitamins-supplements/condition/hair-skin-nails/"
         product_type = list_url.split("/shop/")[1].split("/")[0]
-        products = scrape_product_list(driver, list_url)
+
+        # 询问爬取模式
+        print("\n爬取模式:")
+        print("  1. 单页模式 - 仅爬取第一页（快速测试）")
+        print("  2. 多页模式 - 爬取所有页面（完整数据）")
+        print("  3. 限制页数 - 爬取指定页数")
+
+        mode = input("\n选择模式 (1/2/3, 默认1): ").strip() or "1"
+
+        if mode == "1":
+            # 单页模式
+            products = scrape_product_list(driver, list_url)
+        elif mode == "2":
+            # 多页模式 - 爬取所有页
+            products = scrape_all_pages(
+                driver=driver,
+                base_url=list_url,
+                scrape_single_page_func=scrape_product_list,
+                max_pages=None,
+                enable_resume=True
+            )
+        elif mode == "3":
+            # 限制页数模式
+            try:
+                max_pages = int(input("要爬取多少页？: ").strip())
+                products = scrape_all_pages(
+                    driver=driver,
+                    base_url=list_url,
+                    scrape_single_page_func=scrape_product_list,
+                    max_pages=max_pages,
+                    enable_resume=True
+                )
+            except ValueError:
+                print("输入无效，使用单页模式")
+                products = scrape_product_list(driver, list_url)
+        else:
+            print("无效选择，使用单页模式")
+            products = scrape_product_list(driver, list_url)
 
         print(f"\n{'=' * 60}")
         print(f"共爬取 {len(products)} 个产品的基本信息")

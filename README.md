@@ -1,53 +1,98 @@
-# Holland & Barrett 产品爬虫
+# Holland & Barrett 产品爬虫 🛒
 
-自动爬取 Holland & Barrett 产品信息的Python爬虫工具。
+自动爬取 Holland & Barrett 产品信息，并处理图片上传到图床的完整工具链。
 
-## 快速开始
+## ✨ 主要功能
+
+- 🕷️ **智能爬虫** - 自动爬取产品列表和详情
+- 📄 **多页爬取** - 支持分页爬取，自动翻页获取所有产品
+- 💾 **断点续传** - 支持中断后继续爬取，不丢失进度
+- 📝 **日志系统** - 完善的日志记录，方便调试和追踪
+- 🌍 **自动翻译** - 集成 OpenAI API 翻译为中文
+- 🖼️ **图片处理** - 自动处理图片为 800x400 横条形白底居中
+- ☁️ **图床上传** - 自动上传到 EasyImage 图床
+- 📊 **数据导出** - 导出为 CSV 格式（支持中文）
+- 🎯 **稳定可靠** - 基于 JSON 提取，避免 DOM 变化
+
+## 🚀 快速开始
 
 ```bash
-# 运行完整爬虫
+# 交互式运行（选择单页/多页模式）
 uv run python main.py
 
-# 测试详情页提取
-uv run python test_detail.py
+# 非交互式多页爬取（爬取所有页面）
+uv run python scripts/scrape_multi_pages.py
+
+# 限制爬取页数（如前3页）
+uv run python scripts/scrape_multi_pages.py --max-pages 3
+
+# 仅批量处理图片
+uv run python scripts/batch_process_images.py
+
+# 查看日志
+python scripts/view_logs.py list
 ```
 
-## 功能特性
+📖 详细使用说明请查看 [QUICKSTART.md](QUICKSTART.md)
 
-- ✅ 自动爬取产品列表页
-- ✅ 提取产品详细信息（亮点、描述、用法、配料、营养成分）
-- ✅ 自动处理Cookie弹窗
-- ✅ 导出为CSV格式（支持中文）
-- ✅ 基于JSON提取，稳定可靠
-
-## 项目结构
+## 📁 项目结构
 
 ```
 hb_scraper/
-├── main.py              # 主爬虫程序
-├── extract_product.py   # 产品数据提取工具
-├── test_detail.py       # 测试脚本
-├── README.md            # 项目说明
-├── pyproject.toml       # 项目配置
-├── data/
-│   ├── input/           # 输入数据（CSV模板等）
-│   ├── output/          # 爬取结果输出
-│   └── samples/         # HTML样本文件（测试用）
-└── docs/
-    └── 使用说明.md      # 详细使用文档
+├── main.py                      # 🎯 主程序入口
+├── utils/                       # 🔧 工具模块
+│   ├── image_processor.py       # 图片处理（下载、处理、上传）
+│   ├── translate.py             # 翻译工具
+│   └── extract_product.py       # 产品数据提取
+├── scripts/                     # 📝 可执行脚本
+│   ├── batch_process_images.py  # 批量图片处理（非交互）
+│   └── process_csv_images.py    # 批量图片处理（交互式）
+├── tests/                       # 🧪 测试和演示
+├── data/                        # 💾 数据文件
+│   ├── input/                   # 输入数据
+│   └── output/                  # 输出 CSV
+└── docs/                        # 📚 文档
 ```
 
-## 输出数据
+完整结构说明见 [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
 
-- **data/output/products_basic.csv** - 基本信息（列表页）
-- **data/output/products_complete.csv** - 完整信息（包含详情页）
+## 📊 输出文件
 
-## 技术栈
+| 文件名 | 说明 |
+|--------|------|
+| `products_basic.csv` | 基本信息（列表页） |
+| `products_complete.csv` | 完整英文数据 |
+| `products_complete_zh.csv` | 完整中文数据 |
+| `products_complete_800x400.csv` | 800x400 处理后英文版 |
+| `products_complete_zh_800x400.csv` | 800x400 处理后中文版 |
 
-- Selenium - 浏览器自动化
-- BeautifulSoup4 - HTML解析
-- Python 3.11+ - 开发语言
+## 🎨 图片处理特性
 
-## 详细文档
+- **尺寸**: 800x400 横条形（适合药品瓶子展示）
+- **背景**: 纯白色
+- **对齐**: 居中
+- **格式**: PNG（高质量）
+- **优势**: 减少上下留白，产品更突出
 
-查看 [使用说明.md](./docs/使用说明.md) 了解更多信息。
+## 🛠️ 技术栈
+
+- **Python 3.11+** - 由 pyenv 管理
+- **uv** - 现代包管理器
+- **Selenium** - 浏览器自动化
+- **Pillow** - 图片处理
+- **httpx** - HTTP 客户端
+- **pandas** - 数据处理
+- **OpenAI API** - AI 翻译
+
+## 📚 文档
+
+- [快速启动指南](QUICKSTART.md)
+- [项目结构说明](PROJECT_STRUCTURE.md)
+- [日志系统说明](docs/日志系统说明.md) ⭐ 新增
+- [多页爬取说明](docs/多页爬取说明.md)
+- [详细使用文档](docs/使用说明.md)
+- [翻译工具说明](docs/翻译工具说明.md)
+
+## 🆘 支持
+
+遇到问题？查看 [QUICKSTART.md](QUICKSTART.md) 的常见问题部分。

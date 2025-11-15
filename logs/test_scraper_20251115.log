@@ -1,0 +1,30 @@
+2025-11-15 18:21:18,086 | INFO     | test_scraper:31 | 这是一条普通信息 - 记录正常流程
+2025-11-15 18:21:18,086 | WARNING  | test_scraper:32 | 这是一条警告信息 - 需要注意但不影响运行
+2025-11-15 18:21:18,086 | ERROR    | test_scraper:33 | 这是一条错误信息 - 发生了错误但可以继续
+2025-11-15 18:21:18,086 | CRITICAL | test_scraper:34 | 这是一条严重错误 - 系统可能无法继续
+2025-11-15 18:21:18,086 | ERROR    | test_scraper:52 | 捕获到除零异常，包含完整堆栈信息
+Traceback (most recent call last):
+  File "/Users/town/Project/hb_scraper/tests/test_logging.py", line 50, in test_exception_logging
+    result = 10 / 0
+             ~~~^~~
+ZeroDivisionError: division by zero
+2025-11-15 18:21:18,087 | ERROR    | test_scraper:59 | 键不存在: 'missing_key'
+Traceback (most recent call last):
+  File "/Users/town/Project/hb_scraper/tests/test_logging.py", line 57, in test_exception_logging
+    value = data['missing_key']
+            ~~~~^^^^^^^^^^^^^^^
+KeyError: 'missing_key'
+2025-11-15 18:21:18,087 | INFO     | test_scraper:74 | ============================================================
+2025-11-15 18:21:18,087 | INFO     | test_scraper:75 | 开始爬取产品数据
+2025-11-15 18:21:18,087 | INFO     | test_scraper:76 | ============================================================
+2025-11-15 18:21:18,087 | INFO     | test_scraper:79 | ✓ 浏览器已启动
+2025-11-15 18:21:18,088 | INFO     | test_scraper:82 | 访问页面: https://example.com/products
+2025-11-15 18:21:18,088 | INFO     | test_scraper:85 | ✓ 页面加载完成
+2025-11-15 18:21:18,088 | INFO     | test_scraper:88 | ✓ 已接受 Cookie
+2025-11-15 18:21:18,088 | INFO     | test_scraper:89 | ✓ 找到 20 个产品
+2025-11-15 18:21:18,088 | WARNING  | test_scraper:96 | 产品 2 缺少价格信息
+2025-11-15 18:21:18,088 | INFO     | test_scraper:100 | ============================================================
+2025-11-15 18:21:18,088 | INFO     | test_scraper:101 | 爬取完成！共 20 个产品
+2025-11-15 18:21:18,088 | INFO     | test_scraper:102 | ============================================================
+2025-11-15 18:21:18,088 | INFO     | test_scraper:123 | 提取产品: Vitamin C 1000mg
+2025-11-15 18:21:18,088 | INFO     | test_scraper:134 | 爬取统计: 成功 18/20
