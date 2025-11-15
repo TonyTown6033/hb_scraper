@@ -12,6 +12,7 @@ import re
 from bs4 import BeautifulSoup
 from typing import Dict, List, Any, Optional
 from translate import translate_main
+from process_csv_images import image_post_precessor
 
 
 def handle_cookie_popup(driver, timeout=5):
@@ -201,7 +202,7 @@ def scrape_product_detail(driver, url):
         info_sections = product_data.get("infoSections", {})
         info_section = info_sections.get("infoSection", {})
 
-        # 用法服量
+        # 用法说明
         directions = info_section.get("directions", {})
         heading = directions.get("heading", "")
         text = directions.get("text", "")
@@ -306,7 +307,7 @@ def main():
                 "产品描述",
                 "产品类型",
                 "作用部位",
-                "用法服量",
+                "用法说明",
                 "营养成分",
                 "配料表",
                 "URL",
@@ -321,7 +322,7 @@ def main():
                         "产品名称": product.get("name", ""),
                         "产品价格": product.get("price", ""),
                         "产品亮点": product.get("highlights", ""),
-                        "用法服量": product.get("directions", ""),
+                        "用法说明": product.get("directions", ""),
                         "产品图": product.get("image", ""),
                         "产品类型": product_type,
                         "作用部位": product.get("target_area", ""),
@@ -339,6 +340,7 @@ def main():
             print(f"{'=' * 60}")
 
         translate_main()
+        image_post_precessor()
     except KeyboardInterrupt:
         print("\n\n用户中断爬虫")
     except Exception as e:

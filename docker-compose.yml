@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  chevereto-db:
+    image: mysql:8.0
+    container_name: chevereto-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: chevereto
+      MYSQL_USER: chevereto_user
+      MYSQL_PASSWORD: chevereto_pass
+    volumes:
+      - chevereto-db-data:/var/lib/mysql
+
+  chevereto-app:
+    image: php:8.1-fpm
+    container_name: chevereto-app
+    restart: always
+    volumes:
+      - ./chevereto:/var/www/html
+    depends_on:
+      - chevereto-db
+
+  chevereto-web:
+    image: nginx:stable-alpine
+    container_name: chevereto-web
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./chevereto:/var/www/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - chevereto-app
+
+volumes:
+  chevereto-db-data:
