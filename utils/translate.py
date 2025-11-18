@@ -75,7 +75,15 @@ def translate_cell(client, rate_limiter, idx, col, value):
 
 
 # ======= 主函数 =======
-def translate_main():
+def translate_main(interactive=None):
+    # 如果未指定，从配置文件读取
+    if interactive is None:
+        try:
+            import config
+            interactive = config.INTERACTIVE_MODE
+        except:
+            interactive = True  # 默认为交互式
+
     # 检查输入文件是否存在
     if not Path(INPUT_CSV).exists():
         print(f"❌ 错误：输入文件不存在 {INPUT_CSV}")
@@ -114,10 +122,14 @@ def translate_main():
     print(f"   单线程: {estimated_time_single}秒 ({estimated_time_single / 60:.1f}分钟)")
     print(f"   多线程: {estimated_time_multi}秒 ({estimated_time_multi / 60:.1f}分钟)")
 
-    response = input(f"\n是否开始翻译？(y/n): ")
-    if response.lower() != "y":
-        print("已取消")
-        return
+    # 根据交互式模式决定是否询问
+    if interactive:
+        response = input(f"\n是否开始翻译？(y/n): ")
+        if response.lower() != "y":
+            print("已取消")
+            return
+    else:
+        print(f"\n自动开始翻译（非交互式模式）...")
 
     # 准备翻译任务
     tasks = []

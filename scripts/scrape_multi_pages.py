@@ -15,16 +15,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from utils.multi_page_scraper import scrape_all_pages
+import config
 
 
-def handle_cookie_popup(driver, timeout=5):
+def handle_cookie_popup(driver, timeout=None):
     """处理 Cookie 弹窗"""
+    if timeout is None:
+        timeout = config.COOKIE_TIMEOUT
     try:
-        selectors = [
-            "//button[contains(text(), 'Yes I Accept')]",
-            "//button[contains(text(), 'Accept')]",
-            "//button[@id='onetrust-accept-btn-handler']",
-        ]
+        # 使用配置文件中的 Cookie 选择器
+        selectors = config.COOKIE_SELECTORS
 
         for selector in selectors:
             try:
@@ -127,59 +127,47 @@ def main(max_pages=None, category_url=None):
     print("Holland & Barrett 多页爬虫")
     print("=" * 70)
 
-    # 默认URL
+    # 使用配置文件中的默认URL
     if category_url is None:
-        category_url = "https://www.hollandandbarrett.com/shop/vitamins-supplements/condition/hair-skin-nails/"
+        category_url = config.DEFAULT_CATEGORY_URL
 
-    product_type = category_url.split("/shop/")[1].split("/")[0]
+    product_type = config.get_product_type_from_url(category_url)
 
     print(f"\n目标分类: {product_type}")
     print(f"最大页数: {max_pages or '不限制'}")
     print(f"URL: {category_url}")
 
-    # 配置 Chrome
-    options = webdriver.ChromeOptions()
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option("useAutomationExtension", False)
-
-    # 服务器环境配置（headless 模式）
-    options.add_argument("--headless=new")  # 新版无头模式
-    options.add_argument("--no-sandbox")  # 必须：解决 DevToolsActivePort 文件不存在的报错
-    options.add_argument("--disable-dev-shm-usage")  # 必须：解决资源限制问题
-    options.add_argument("--disable-gpu")  # 性能优化
-    options.add_argument("--disable-extensions")  # 禁用扩展
-
-    # 设置 User-Agent，避免被识别为爬虫
-    options.add_argument(
-        "user-agent=Mozilla/5.0 (X11; Linux x86_64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    )
+    # 使用配置文件中的 Chrome 选项
+    options = config.get_chrome_options()
 
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
 
+    # 使用配置文件中的超时设置
+    driver.set_page_load_timeout(config.PAGE_LOAD_TIMEOUT)
+    driver.set_script_timeout(config.SCRIPT_TIMEOUT)
+
     try:
-        # 使用多页爬取
+        # 使用配置文件中的多页爬取配置
         products = scrape_all_pages(
             driver=driver,
             base_url=category_url,
             scrape_single_page_func=scrape_product_list,
             max_pages=max_pages,
-            enable_resume=True
+            enable_resume=config.ENABLE_RESUME
         )
 
         print(f"\n{'=' * 70}")
         print(f"爬取完成！共 {len(products)} 个产品")
         print(f"{'=' * 70}")
 
-        # 保存到CSV
+        # 使用配置文件中的输出路径
         if products:
-            output_file = f"data/output/products_multi_page_{product_type}.csv"
-            Path(output_file).parent.mkdir(parents=True, exist_ok=True)
+            output_file = config.get_output_path(product_type=product_type, output_type='multipage')
+            output_file.parent.mkdir(parents=True, exist_ok=True)
 
             with open(output_file, "w", newline="", encoding="utf-8-sig") as f:
-                writer = csv.DictWriter(f, fieldnames=["brand", "name", "price", "image", "url"])
+                writer = csv.DictWriter(f, fieldnames=config.CSV_FIELDNAMES_BASIC)
                 writer.writeheader()
                 writer.writerows(products)
 

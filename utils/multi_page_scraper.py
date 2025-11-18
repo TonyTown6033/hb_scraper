@@ -248,7 +248,8 @@ def scrape_all_pages(
     scrape_single_page_func,
     max_pages: Optional[int] = None,
     start_page: int = 1,
-    enable_resume: bool = True
+    enable_resume: bool = True,
+    interactive: Optional[bool] = None
 ) -> List[Dict]:
     """
     爬取所有分页
@@ -260,10 +261,18 @@ def scrape_all_pages(
         max_pages: 最大爬取页数，None 表示爬取所有页
         start_page: 起始页码
         enable_resume: 是否启用断点续传
+        interactive: 是否交互式模式，None 表示从配置文件读取
 
     Returns:
         List[Dict]: 所有产品数据
     """
+    # 如果未指定，从配置文件读取
+    if interactive is None:
+        try:
+            import config
+            interactive = config.INTERACTIVE_MODE
+        except:
+            interactive = True  # 默认为交互式
     scraper = MultiPageScraper(driver)
     all_products = []
     current_page = start_page
@@ -275,8 +284,25 @@ def scrape_all_pages(
             print(f"\n📂 发现之前的进度:")
             print(f"   已爬取: {progress.get('pages_scraped', 0)} 页")
             print(f"   产品数: {progress.get('total_products', 0)} 个")
-            response = input("是否继续之前的爬取？(y/n): ").strip().lower()
-            if response == "y":
+
+            # 根据交互式模式决定是否询问
+            should_resume = False
+            if interactive:
+                response = input("是否继续之前的爬取？(y/n): ").strip().lower()
+                should_resume = (response == "y")
+            else:
+                # 非交互式模式：从配置文件读取AUTO_RESUME
+                try:
+                    import config
+                    should_resume = config.AUTO_RESUME
+                    if should_resume:
+                        print("   → 自动继续之前的爬取（配置文件设置）")
+                    else:
+                        print("   → 不继续之前的爬取，重新开始（配置文件设置）")
+                except:
+                    should_resume = True  # 默认继续
+
+            if should_resume:
                 all_products = progress.get("products", [])
                 current_page = progress.get("last_page", 1) + 1
                 print(f"✓ 从第 {current_page} 页继续爬取")

@@ -1319,3 +1319,13 @@
 2025-11-18 13:40:54,764 | [32m[1mINFO[0m | scraper:319 | [32m
 ✗ 44 个失败产品已记录到: data/output/failed_products.json[0m
 2025-11-18 13:40:54,765 | [32m[1mINFO[0m | scraper:320 | [32m  可使用 'uv run python scripts/retry_failed.py' 重新爬取[0m
+2025-11-19 03:05:54,981 | [32m[1mINFO[0m | scraper:202 | [32m开始并行爬取 80 个项目
+  - 线程数: 3
+  - 重试次数: 3
+  - 请求延迟: 2-4秒[0m
+2025-11-19 03:05:58,633 | [32m[1mINFO[0m | scraper:133 | [32m[2/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/viviscal-healthy-hair-vitamins-30-tablets-6100000423[0m
+2025-11-19 03:05:59,655 | [32m[1mINFO[0m | scraper:133 | [32m[1/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/starpowa-hair-skin-and-nail-gummies-60036102[0m
+2025-11-19 03:06:02,576 | [33m[1mWARNING[0m | scraper:149 | [33m[3/80] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-19 03:06:03,994 | [33m[1mWARNING[0m | scraper:129 | [33m[3/80] 重试 2/3: https://www.hollandandbarrett.com/shop/product/nature-s-bounty-hair-skin-and-nails-with-biotin-60-gummies-60060158[0m
+2025-11-19 03:06:04,609 | [32m[1mINFO[0m | scraper:140 | [32m[3/80] ✓ 完成: ® Hair, Skin and Nails with Biotin 60 Gu[0m
+2025-11-19 03:06:04,766 | [32m[1mINFO[0m | scraper:140 | [32m[1/80] ✓ 完成: Hair, Skin and Nail 60 Gummies[0m

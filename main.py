@@ -17,18 +17,17 @@ from utils.multi_page_scraper import scrape_all_pages
 from utils.parallel_scraper import scrape_details_parallel
 from utils.logger import setup_logger, get_logger
 import logging
+import config
 
 
-def handle_cookie_popup(driver, timeout=5):
+def handle_cookie_popup(driver, timeout=None):
     """优雅地处理 Cookie 弹窗"""
     logger = get_logger()
+    if timeout is None:
+        timeout = config.COOKIE_TIMEOUT
     try:
-        # 尝试多种可能的 Cookie 接受按钮选择器
-        selectors = [
-            "//button[contains(text(), 'Yes I Accept')]",
-            "//button[contains(text(), 'Accept')]",
-            "//button[@id='onetrust-accept-btn-handler']",
-        ]
+        # 使用配置文件中的 Cookie 选择器
+        selectors = config.COOKIE_SELECTORS
 
         for selector in selectors:
             try:
@@ -257,68 +256,66 @@ def main():
     print("Holland & Barrett 产品爬虫")
     print("=" * 60)
 
-    # 配置 Chrome 选项
-    options = webdriver.ChromeOptions()
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option("useAutomationExtension", False)
-
-    # 服务器环境配置（headless 模式）
-    options.add_argument("--headless=new")  # 新版无头模式
-    options.add_argument("--no-sandbox")  # 必须：解决 DevToolsActivePort 文件不存在的报错
-    options.add_argument("--disable-dev-shm-usage")  # 必须：解决资源限制问题
-    options.add_argument("--disable-gpu")  # 性能优化
-    options.add_argument("--disable-extensions")  # 禁用扩展
-
-    # 设置 User-Agent，避免被识别为爬虫
-    options.add_argument(
-        "user-agent=Mozilla/5.0 (X11; Linux x86_64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    )
+    # 使用配置文件中的 Chrome 选项
+    options = config.get_chrome_options()
 
     # 使用 webdriver_manager 自动管理 ChromeDriver
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
 
+    # 使用配置文件中的超时设置
+    driver.set_page_load_timeout(config.PAGE_LOAD_TIMEOUT)
+    driver.set_script_timeout(config.SCRIPT_TIMEOUT)
+
     try:
-        # 爬取产品列表
-        list_url = "https://www.hollandandbarrett.com/shop/vitamins-supplements/condition/hair-skin-nails/"
-        product_type = list_url.split("/shop/")[1].split("/")[0]
+        # 使用配置文件中的默认URL
+        list_url = config.DEFAULT_CATEGORY_URL
+        product_type = config.get_product_type_from_url(list_url)
 
-        # 询问爬取模式
-        print("\n爬取模式:")
-        print("  1. 单页模式 - 仅爬取第一页（快速测试）")
-        print("  2. 多页模式 - 爬取所有页面（完整数据）")
-        print("  3. 限制页数 - 爬取指定页数")
-
-        mode = input("\n选择模式 (1/2/3, 默认1): ").strip() or "1"
+        # 爬取模式选择 - 支持交互式和非交互式
+        if config.INTERACTIVE_MODE:
+            print("\n爬取模式:")
+            print("  1. 单页模式 - 仅爬取第一页（快速测试）")
+            print("  2. 多页模式 - 爬取所有页面（完整数据）")
+            print("  3. 限制页数 - 爬取指定页数")
+            mode = input("\n选择模式 (1/2/3, 默认1): ").strip() or "1"
+        else:
+            mode = str(config.SCRAPE_MODE)
+            print(f"\n使用配置文件中的爬取模式: {mode}")
 
         if mode == "1":
             # 单页模式
+            print("  → 单页模式")
             products = scrape_product_list(driver, list_url)
         elif mode == "2":
             # 多页模式 - 爬取所有页
+            print("  → 多页模式 - 爬取所有页面")
             products = scrape_all_pages(
                 driver=driver,
                 base_url=list_url,
                 scrape_single_page_func=scrape_product_list,
                 max_pages=None,
-                enable_resume=True
+                enable_resume=config.ENABLE_RESUME
             )
         elif mode == "3":
             # 限制页数模式
-            try:
-                max_pages = int(input("要爬取多少页？: ").strip())
-                products = scrape_all_pages(
-                    driver=driver,
-                    base_url=list_url,
-                    scrape_single_page_func=scrape_product_list,
-                    max_pages=max_pages,
-                    enable_resume=True
-                )
-            except ValueError:
-                print("输入无效，使用单页模式")
-                products = scrape_product_list(driver, list_url)
+            if config.INTERACTIVE_MODE:
+                try:
+                    max_pages = int(input("要爬取多少页？: ").strip())
+                except ValueError:
+                    print("输入无效，使用配置文件默认值")
+                    max_pages = config.MAX_PAGES_LIMIT
+            else:
+                max_pages = config.MAX_PAGES_LIMIT
+
+            print(f"  → 限制页数模式 - 爬取{max_pages}页")
+            products = scrape_all_pages(
+                driver=driver,
+                base_url=list_url,
+                scrape_single_page_func=scrape_product_list,
+                max_pages=max_pages,
+                enable_resume=config.ENABLE_RESUME
+            )
         else:
             print("无效选择，使用单页模式")
             products = scrape_product_list(driver, list_url)
@@ -327,61 +324,82 @@ def main():
         print(f"共爬取 {len(products)} 个产品的基本信息")
         print(f"{'=' * 60}")
 
-        # 保存基本信息到CSV（暂时不包含详情）
-        output_file = "data/output/products_basic.csv"
+        # 使用配置文件中的输出路径
+        output_file = config.get_output_path(output_type='basic')
         if products:
             with open(output_file, "w", newline="", encoding="utf-8-sig") as f:
-                writer = csv.DictWriter(f, fieldnames=["brand", "name", "price", "image", "url"])
+                writer = csv.DictWriter(f, fieldnames=config.CSV_FIELDNAMES_BASIC)
                 writer.writeheader()
                 writer.writerows(products)
             print(f"\n✓ 基本信息已保存到: {output_file}")
 
-        # 询问是否继续爬取详情页
-        print("\n下一步: 爬取产品详情页（需要更多时间）")
-        print("提示: 详情页爬取会花费较长时间，建议先测试几个产品")
-        response = input("是否继续爬取详情页？(y/n): ")
+        # 询问是否继续爬取详情页 - 支持交互式和非交互式
+        if config.INTERACTIVE_MODE:
+            print("\n下一步: 爬取产品详情页（需要更多时间）")
+            print("提示: 详情页爬取会花费较长时间，建议先测试几个产品")
+            response = input("是否继续爬取详情页？(y/n): ")
+            scrape_details = response.lower() == "y"
+        else:
+            scrape_details = config.SCRAPE_DETAILS
+            if scrape_details:
+                print("\n配置文件设置: 爬取详情页")
+            else:
+                print("\n配置文件设置: 跳过详情页爬取")
 
-        if response.lower() == "y":
-            # 询问爬取数量
-            try:
-                max_count = input(f"要爬取多少个产品？(1-{len(products)}, 回车默认全部): ").strip()
-                if max_count:
-                    max_products = min(int(max_count), len(products))
+        if scrape_details:
+            # 询问爬取数量 - 支持交互式和非交互式
+            if config.INTERACTIVE_MODE:
+                try:
+                    max_count = input(f"要爬取多少个产品？(1-{len(products)}, 回车默认全部): ").strip()
+                    if max_count:
+                        max_products = min(int(max_count), len(products))
+                    else:
+                        max_products = len(products)
+                except ValueError:
+                    max_products = len(products)
+            else:
+                if config.MAX_PRODUCTS_TO_SCRAPE is not None:
+                    max_products = min(config.MAX_PRODUCTS_TO_SCRAPE, len(products))
+                    print(f"配置文件设置: 爬取{max_products}个产品")
                 else:
                     max_products = len(products)
-            except ValueError:
-                max_products = len(products)
+                    print(f"配置文件设置: 爬取全部{max_products}个产品")
 
-            # 询问是否使用并行爬取
-            print("\n爬取模式:")
-            print("  1. 顺序模式 - 一个接一个爬取（较慢但稳定）")
-            print("  2. 并行模式 - 多线程同时爬取（推荐，3-5个线程）")
-            parallel_mode = input("选择模式 (1/2, 默认2): ").strip() or "2"
+            # 询问是否使用并行爬取 - 支持交互式和非交互式
+            if config.INTERACTIVE_MODE:
+                print("\n爬取模式:")
+                print("  1. 顺序模式 - 一个接一个爬取（较慢但稳定）")
+                print("  2. 并行模式 - 多线程同时爬取（推荐，3-5个线程）")
+                parallel_mode = input("选择模式 (1/2, 默认2): ").strip() or "2"
+            else:
+                parallel_mode = str(config.DETAIL_SCRAPE_MODE)
+                mode_name = "并行模式" if parallel_mode == "2" else "顺序模式"
+                print(f"配置文件设置: {mode_name}")
 
             if parallel_mode == "2":
-                # 并行模式配置
-                print("\n提示: 建议使用3-5个线程以平衡速度和稳定性")
-                try:
-                    workers = input("并发线程数 (建议3-5, 默认3): ").strip() or "3"
-                    max_workers = min(max(int(workers), 1), 10)  # 限制在1-10之间
-                except ValueError:
-                    max_workers = 3
+                # 并行模式配置 - 支持交互式和非交互式
+                if config.INTERACTIVE_MODE:
+                    print(f"\n提示: 建议使用{config.DEFAULT_MAX_WORKERS}-5个线程以平衡速度和稳定性")
+                    try:
+                        workers = input(f"并发线程数 (建议{config.DEFAULT_MAX_WORKERS}-5, 默认{config.DEFAULT_MAX_WORKERS}): ").strip() or str(config.DEFAULT_MAX_WORKERS)
+                        max_workers = min(max(int(workers), 1), config.MAX_WORKERS_LIMIT)
+                    except ValueError:
+                        max_workers = config.DEFAULT_MAX_WORKERS
+                else:
+                    max_workers = config.DEFAULT_MAX_WORKERS
+                    print(f"配置文件设置: {max_workers}个并发线程")
 
-                retry_times = 3
-                request_delay = (2, 4)
+                retry_times = config.RETRY_TIMES
+                request_delay = (config.REQUEST_DELAY_MIN, config.REQUEST_DELAY_MAX)
 
                 print(f"\n使用并行模式爬取 {max_products} 个产品，{max_workers} 个线程并发")
                 print(f"配置: {retry_times}次重试, {request_delay[0]}-{request_delay[1]}秒随机延迟")
-                print(f"💡 每100个产品自动写入CSV，避免内存占用过大")
+                print(f"💡 每{config.BATCH_SIZE}个产品自动写入CSV，避免内存占用过大")
                 print(f"{'=' * 60}")
 
-                # 定义CSV文件路径
-                final_output = "data/output/products_complete.csv"
-                fieldnames = [
-                    "产品名称", "产品亮点", "产品价格", "产品品牌",
-                    "产品图", "产品描述", "产品类型", "作用部位",
-                    "用法说明", "营养成分", "配料表", "URL"
-                ]
+                # 使用配置文件中的路径和字段名
+                final_output = config.get_output_path(output_type='complete')
+                fieldnames = config.CSV_FIELDNAMES_COMPLETE
 
                 # 创建批次写入回调函数
                 def write_batch_to_csv(batch_products, batch_num):
@@ -418,7 +436,7 @@ def main():
 
                     print(f"✓ 批次 {batch_num} 已写入 {len(batch_products)} 个产品到 {final_output}")
 
-                # 使用并行爬取（带分批写入）
+                # 使用并行爬取（带分批写入）- 使用配置文件中的批次大小
                 products = scrape_details_parallel(
                     products=products,
                     scrape_detail_func=scrape_product_detail,
@@ -426,7 +444,7 @@ def main():
                     max_products=max_products,
                     retry_times=retry_times,
                     request_delay=request_delay,
-                    batch_size=100,  # 每100个产品写入一次
+                    batch_size=config.BATCH_SIZE,
                     batch_callback=write_batch_to_csv
                 )
             else:
@@ -460,11 +478,11 @@ def main():
                         })
                     time.sleep(2)  # 避免请求过快
 
-                # 保存失败记录
+                # 保存失败记录 - 使用配置文件中的路径
                 if failed_products:
                     import json
                     from pathlib import Path
-                    failed_file = Path("data/output/failed_products.json")
+                    failed_file = config.get_output_path(output_type='failed')
                     failed_file.parent.mkdir(parents=True, exist_ok=True)
 
                     # 加载现有失败记录
@@ -486,21 +504,9 @@ def main():
 
             # 保存完整数据到CSV（如果是并行模式且使用了分批写入，则跳过）
             if parallel_mode != "2":  # 顺序模式需要保存
-                final_output = "data/output/products_complete.csv"
-                fieldnames = [
-                    "产品名称",
-                    "产品亮点",
-                    "产品价格",
-                    "产品品牌",
-                    "产品图",
-                    "产品描述",
-                    "产品类型",
-                    "作用部位",
-                    "用法说明",
-                    "营养成分",
-                    "配料表",
-                    "URL",
-                ]
+                # 使用配置文件中的路径和字段名
+                final_output = config.get_output_path(output_type='complete')
+                fieldnames = config.CSV_FIELDNAMES_COMPLETE
 
                 with open(final_output, "w", newline="", encoding="utf-8-sig") as f:
                     writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -534,8 +540,18 @@ def main():
                 print(f"✓ 共爬取 {max_products} 个产品的完整信息")
             print(f"{'=' * 60}")
 
-        translate_main()
-        image_post_precessor()
+        # 运行翻译和图片处理 - 根据配置决定
+        if config.RUN_TRANSLATION:
+            print("\n运行翻译...")
+            translate_main()
+        else:
+            print("\n跳过翻译（配置文件设置）")
+
+        if config.RUN_IMAGE_PROCESSING:
+            print("\n运行图片处理...")
+            image_post_precessor()
+        else:
+            print("\n跳过图片处理（配置文件设置）")
     except KeyboardInterrupt:
         print("\n\n用户中断爬虫")
     except Exception as e:

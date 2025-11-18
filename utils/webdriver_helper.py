@@ -57,13 +57,17 @@ def find_chromedriver():
     return None
 
 
-def create_chrome_driver(headless=True, use_local_driver=False):
+def create_chrome_driver(headless=True, use_local_driver=False, page_load_strategy='eager'):
     """
     创建 Chrome WebDriver 实例
 
     Args:
         headless: 是否使用无头模式
         use_local_driver: 是否使用本地 ChromeDriver（不使用 webdriver-manager）
+        page_load_strategy: 页面加载策略 ('normal', 'eager', 'none')
+                          - normal: 等待所有资源加载（默认，最慢）
+                          - eager: 等待 DOM 加载完成（推荐，平衡）
+                          - none: 不等待（最快，但可能不稳定）
 
     Returns:
         webdriver.Chrome: Chrome WebDriver 实例
@@ -82,6 +86,17 @@ def create_chrome_driver(headless=True, use_local_driver=False):
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-extensions")
+    options.add_argument("--disable-software-rasterizer")
+
+    # 性能优化 - 禁用不必要的功能
+    options.add_argument("--disable-features=VizDisplayCompositor")
+    options.add_argument("--disable-logging")
+    options.add_argument("--log-level=3")  # 只显示致命错误
+    options.add_argument("--silent")
+
+    # 禁用图片加载（可选，可以加速）
+    # prefs = {"profile.managed_default_content_settings.images": 2}
+    # options.add_experimental_option("prefs", prefs)
 
     # User-Agent
     options.add_argument(
@@ -90,7 +105,8 @@ def create_chrome_driver(headless=True, use_local_driver=False):
     )
 
     # 页面加载策略
-    options.page_load_strategy = 'normal'
+    # eager: 不等待所有资源，只等 DOM 完成，更快且通常足够
+    options.page_load_strategy = page_load_strategy
 
     # 创建 WebDriver
     if use_local_driver:
@@ -125,9 +141,9 @@ def create_chrome_driver(headless=True, use_local_driver=False):
             service = Service(executable_path=driver_path)
             driver = webdriver.Chrome(service=service, options=options)
 
-    # 设置超时时间
-    driver.set_page_load_timeout(30)
-    driver.set_script_timeout(30)
+    # 设置超时时间（增加到 60 秒以应对慢速网络）
+    driver.set_page_load_timeout(60)
+    driver.set_script_timeout(60)
 
     return driver
 
