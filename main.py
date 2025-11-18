@@ -14,6 +14,7 @@ from typing import Dict, List, Any, Optional
 from utils.translate import translate_main
 from scripts.process_csv_images import image_post_precessor
 from utils.multi_page_scraper import scrape_all_pages
+from utils.parallel_scraper import scrape_details_parallel
 from utils.logger import setup_logger, get_logger
 import logging
 
@@ -181,7 +182,17 @@ def scrape_product_detail(driver, url):
     """爬取产品详情页的详细信息"""
     try:
         driver.get(url)
-        time.sleep(3)
+
+        # 增加等待时间，确保页面完全加载
+        time.sleep(4)
+
+        # 等待页面关键元素加载
+        try:
+            WebDriverWait(driver, 10).until(
+                lambda d: d.execute_script("return document.readyState") == "complete"
+            )
+        except:
+            pass  # 超时也继续尝试
 
         # 获取页面HTML
         html_content = driver.page_source
@@ -328,14 +339,91 @@ def main():
             except ValueError:
                 max_products = len(products)
 
-            print(f"\n开始爬取 {max_products} 个产品的详情...")
-            print(f"{'=' * 60}")
+            # 询问是否使用并行爬取
+            print("\n爬取模式:")
+            print("  1. 顺序模式 - 一个接一个爬取（较慢但稳定）")
+            print("  2. 并行模式 - 多线程同时爬取（推荐，3-5个线程）")
+            parallel_mode = input("选择模式 (1/2, 默认2): ").strip() or "2"
 
-            for idx, product in enumerate(products[:max_products], 1):
-                print(f"\n[{idx}/{max_products}] {product['name'][:50]}...")
-                details = scrape_product_detail(driver, product["url"])
-                product.update(details)
-                time.sleep(2)  # 避免请求过快
+            if parallel_mode == "2":
+                # 并行模式配置
+                print("\n提示: 建议使用3-5个线程以平衡速度和稳定性")
+                try:
+                    workers = input("并发线程数 (建议3-5, 默认3): ").strip() or "3"
+                    max_workers = min(max(int(workers), 1), 10)  # 限制在1-10之间
+                except ValueError:
+                    max_workers = 3
+
+                retry_times = 3
+                request_delay = (2, 4)
+
+                print(f"\n使用并行模式爬取 {max_products} 个产品，{max_workers} 个线程并发")
+                print(f"配置: {retry_times}次重试, {request_delay[0]}-{request_delay[1]}秒随机延迟")
+                print(f"{'=' * 60}")
+
+                # 使用并行爬取
+                products = scrape_details_parallel(
+                    products=products,
+                    scrape_detail_func=scrape_product_detail,
+                    max_workers=max_workers,
+                    max_products=max_products,
+                    retry_times=retry_times,
+                    request_delay=request_delay
+                )
+            else:
+                # 顺序爬取（保留原有逻辑）
+                print(f"\n使用顺序模式爬取 {max_products} 个产品的详情...")
+                print(f"{'=' * 60}")
+
+                failed_products = []  # 记录失败的产品
+                for idx, product in enumerate(products[:max_products], 1):
+                    print(f"\n[{idx}/{max_products}] {product['name'][:50]}...")
+                    try:
+                        details = scrape_product_detail(driver, product["url"])
+                        # 检查是否成功获取到详情
+                        if details and any(key in details for key in ['highlights', 'description', 'directions']):
+                            product.update(details)
+                        else:
+                            print(f"  ✗ 未获取到详情数据")
+                            failed_products.append({
+                                "item_data": product.copy(),
+                                "error": "未获取到详情数据",
+                                "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                                "url": product["url"]
+                            })
+                    except Exception as e:
+                        print(f"  ✗ 爬取失败: {e}")
+                        failed_products.append({
+                            "item_data": product.copy(),
+                            "error": str(e),
+                            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                            "url": product["url"]
+                        })
+                    time.sleep(2)  # 避免请求过快
+
+                # 保存失败记录
+                if failed_products:
+                    import json
+                    from pathlib import Path
+                    failed_file = Path("data/output/failed_products.json")
+                    failed_file.parent.mkdir(parents=True, exist_ok=True)
+
+                    # 加载现有失败记录
+                    existing_failed = []
+                    if failed_file.exists():
+                        try:
+                            with open(failed_file, 'r', encoding='utf-8') as f:
+                                existing_failed = json.load(f)
+                        except:
+                            pass
+
+                    # 合并并保存
+                    all_failed = existing_failed + failed_products
+                    with open(failed_file, 'w', encoding='utf-8') as f:
+                        json.dump(all_failed, f, ensure_ascii=False, indent=2)
+
+                    print(f"\n✗ {len(failed_products)} 个产品爬取失败，已记录到: {failed_file}")
+                    print(f"  可使用 'uv run python scripts/retry_failed.py' 重新爬取")
 
             # 保存完整数据到CSV
             final_output = "data/output/products_complete.csv"

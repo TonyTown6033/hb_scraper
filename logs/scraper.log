@@ -1,0 +1,562 @@
+2025-11-18 12:40:56,220 | [32m[1mINFO[0m | scraper:117 | [32m开始并行爬取 80 个项目，使用 8 个线程[0m
+2025-11-18 12:40:56,965 | [31m[1mERROR[0m | scraper:85 | [31m[1/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:40:56,967 | [32m[1mINFO[0m | scraper:149 | [32m进度: 1/80 (1.2%) - 已用时: 0.7s - 预计剩余: 58.8s[0m
+2025-11-18 12:40:58,167 | [32m[1mINFO[0m | scraper:73 | [32m[6/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-hair-high-strength-complex-30-capsules-6100008623[0m
+2025-11-18 12:40:58,352 | [32m[1mINFO[0m | scraper:73 | [32m[4/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-nails-formula-90-tablets-6100008960[0m
+2025-11-18 12:40:58,354 | [32m[1mINFO[0m | scraper:73 | [32m[5/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/hairburst-chewable-heart-hair-vitamins-1-month-supply-60010813[0m
+2025-11-18 12:40:58,359 | [32m[1mINFO[0m | scraper:73 | [32m[7/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-tablets-1000ug-6100130004[0m
+2025-11-18 12:40:58,365 | [32m[1mINFO[0m | scraper:73 | [32m[2/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/vitabiotics-perfectil-tablets-60013790[0m
+2025-11-18 12:40:58,370 | [32m[1mINFO[0m | scraper:73 | [32m[3/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/viviscal-healthy-hair-vitamins-30-tablets-6100000423[0m
+2025-11-18 12:40:58,426 | [32m[1mINFO[0m | scraper:73 | [32m[8/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/nature-s-bounty-hair-skin-and-nails-with-biotin-60-gummies-60060158[0m
+2025-11-18 12:40:58,730 | [32m[1mINFO[0m | scraper:73 | [32m[9/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-hair-vitamin-pineapple-flavour-60-gummies-6100008620[0m
+2025-11-18 12:41:01,784 | [32m[1mINFO[0m | scraper:80 | [32m[2/80] 完成: Perfectil 30 Tablets[0m
+2025-11-18 12:41:01,785 | [32m[1mINFO[0m | scraper:80 | [32m[4/80] 完成: Skin, Hair & Nails Formula 90 Tablets[0m
+2025-11-18 12:41:01,856 | [32m[1mINFO[0m | scraper:80 | [32m[3/80] 完成: Healthy Hair Vitamins 180 Tablets[0m
+2025-11-18 12:41:01,861 | [32m[1mINFO[0m | scraper:80 | [32m[8/80] 完成: ® Hair, Skin and Nails with Biotin 60 Gu[0m
+2025-11-18 12:41:01,889 | [32m[1mINFO[0m | scraper:149 | [32m进度: 2/80 (2.5%) - 已用时: 5.7s - 预计剩余: 221.0s[0m
+2025-11-18 12:41:01,893 | [32m[1mINFO[0m | scraper:80 | [32m[6/80] 完成: Biotin Hair High Strength Complex 30 Cap[0m
+2025-11-18 12:41:01,893 | [32m[1mINFO[0m | scraper:149 | [32m进度: 3/80 (3.8%) - 已用时: 5.7s - 预计剩余: 145.6s[0m
+2025-11-18 12:41:01,936 | [32m[1mINFO[0m | scraper:149 | [32m进度: 4/80 (5.0%) - 已用时: 5.7s - 预计剩余: 108.5s[0m
+2025-11-18 12:41:01,939 | [32m[1mINFO[0m | scraper:80 | [32m[5/80] 完成: Chewable Hair Vitamins 30 Day Supply 60 [0m
+2025-11-18 12:41:01,939 | [32m[1mINFO[0m | scraper:80 | [32m[7/80] 完成: Biotin 1000ug 120 Tablets[0m
+2025-11-18 12:41:01,953 | [32m[1mINFO[0m | scraper:149 | [32m进度: 5/80 (6.2%) - 已用时: 5.7s - 预计剩余: 86.0s[0m
+2025-11-18 12:41:01,973 | [32m[1mINFO[0m | scraper:149 | [32m进度: 6/80 (7.5%) - 已用时: 5.8s - 预计剩余: 70.9s[0m
+2025-11-18 12:41:02,019 | [32m[1mINFO[0m | scraper:149 | [32m进度: 7/80 (8.8%) - 已用时: 5.8s - 预计剩余: 60.4s[0m
+2025-11-18 12:41:02,041 | [32m[1mINFO[0m | scraper:149 | [32m进度: 8/80 (10.0%) - 已用时: 5.8s - 预计剩余: 52.4s[0m
+2025-11-18 12:41:02,063 | [32m[1mINFO[0m | scraper:80 | [32m[9/80] 完成: Hair Vitamin Pineapple Flavour 60 Gummie[0m
+2025-11-18 12:41:02,140 | [32m[1mINFO[0m | scraper:149 | [32m进度: 9/80 (11.2%) - 已用时: 5.9s - 预计剩余: 46.7s[0m
+2025-11-18 12:41:03,446 | [32m[1mINFO[0m | scraper:73 | [32m[14/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-and-nails-vegan-pineapple-flavour-60-gummies-6100008618[0m
+2025-11-18 12:41:03,483 | [32m[1mINFO[0m | scraper:73 | [32m[11/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/vitabiotics-perfectil-max-capsules-60012089[0m
+2025-11-18 12:41:03,485 | [32m[1mINFO[0m | scraper:73 | [32m[16/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/centred-tender-love-and-hair-60-capsules-6100009763[0m
+2025-11-18 12:41:03,555 | [32m[1mINFO[0m | scraper:73 | [32m[12/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-ultra-woman-daily-multi-caplets-6100005249[0m
+2025-11-18 12:41:05,600 | [31m[1mERROR[0m | scraper:85 | [31m[10/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:05,600 | [31m[1mERROR[0m | scraper:85 | [31m[17/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:05,601 | [32m[1mINFO[0m | scraper:149 | [32m进度: 10/80 (12.5%) - 已用时: 9.4s - 预计剩余: 65.7s[0m
+2025-11-18 12:41:05,611 | [31m[1mERROR[0m | scraper:85 | [31m[13/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:05,612 | [32m[1mINFO[0m | scraper:149 | [32m进度: 11/80 (13.8%) - 已用时: 9.4s - 预计剩余: 58.9s[0m
+2025-11-18 12:41:05,613 | [32m[1mINFO[0m | scraper:149 | [32m进度: 12/80 (15.0%) - 已用时: 9.4s - 预计剩余: 53.2s[0m
+2025-11-18 12:41:06,235 | [31m[1mERROR[0m | scraper:85 | [31m[15/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:06,236 | [32m[1mINFO[0m | scraper:149 | [32m进度: 13/80 (16.2%) - 已用时: 10.0s - 预计剩余: 51.6s[0m
+2025-11-18 12:41:06,859 | [32m[1mINFO[0m | scraper:80 | [32m[14/80] 完成: Skin Hair And Nails Vegan Pineapple Flav[0m
+2025-11-18 12:41:06,935 | [32m[1mINFO[0m | scraper:149 | [32m进度: 14/80 (17.5%) - 已用时: 10.7s - 预计剩余: 50.5s[0m
+2025-11-18 12:41:06,977 | [32m[1mINFO[0m | scraper:80 | [32m[11/80] 完成: Perfectil Max 84 Capsules[0m
+2025-11-18 12:41:07,060 | [32m[1mINFO[0m | scraper:73 | [32m[19/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/bioglan-beauty-collagen-60049202[0m
+2025-11-18 12:41:07,071 | [32m[1mINFO[0m | scraper:149 | [32m进度: 15/80 (18.8%) - 已用时: 10.8s - 预计剩余: 47.0s[0m
+2025-11-18 12:41:07,076 | [32m[1mINFO[0m | scraper:80 | [32m[16/80] 完成: Centred. Tender Love And Hair 60 Capsule[0m
+2025-11-18 12:41:07,077 | [32m[1mINFO[0m | scraper:80 | [32m[12/80] 完成: Ultra Woman 90 Tablets[0m
+2025-11-18 12:41:07,158 | [32m[1mINFO[0m | scraper:149 | [32m进度: 16/80 (20.0%) - 已用时: 10.9s - 预计剩余: 43.7s[0m
+2025-11-18 12:41:07,160 | [32m[1mINFO[0m | scraper:149 | [32m进度: 17/80 (21.2%) - 已用时: 10.9s - 预计剩余: 40.5s[0m
+2025-11-18 12:41:07,508 | [32m[1mINFO[0m | scraper:73 | [32m[21/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-hyaluronic-acid-with-vitamin-c-capsules-20mg-60013440[0m
+2025-11-18 12:41:09,358 | [31m[1mERROR[0m | scraper:85 | [31m[18/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:09,359 | [32m[1mINFO[0m | scraper:149 | [32m进度: 18/80 (22.5%) - 已用时: 13.1s - 预计剩余: 45.2s[0m
+2025-11-18 12:41:09,360 | [31m[1mERROR[0m | scraper:85 | [31m[20/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:09,368 | [32m[1mINFO[0m | scraper:149 | [32m进度: 19/80 (23.8%) - 已用时: 13.1s - 预计剩余: 42.2s[0m
+2025-11-18 12:41:10,286 | [31m[1mERROR[0m | scraper:85 | [31m[22/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:10,287 | [32m[1mINFO[0m | scraper:149 | [32m进度: 20/80 (25.0%) - 已用时: 14.1s - 预计剩余: 42.2s[0m
+2025-11-18 12:41:10,343 | [31m[1mERROR[0m | scraper:85 | [31m[23/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:10,343 | [32m[1mINFO[0m | scraper:149 | [32m进度: 21/80 (26.2%) - 已用时: 14.1s - 预计剩余: 39.7s[0m
+2025-11-18 12:41:10,393 | [31m[1mERROR[0m | scraper:85 | [31m[25/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:10,394 | [32m[1mINFO[0m | scraper:149 | [32m进度: 22/80 (27.5%) - 已用时: 14.2s - 预计剩余: 37.4s[0m
+2025-11-18 12:41:10,406 | [31m[1mERROR[0m | scraper:85 | [31m[24/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:10,407 | [32m[1mINFO[0m | scraper:149 | [32m进度: 23/80 (28.7%) - 已用时: 14.2s - 预计剩余: 35.2s[0m
+2025-11-18 12:41:10,628 | [31m[1mERROR[0m | scraper:85 | [31m[30/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:10,629 | [32m[1mINFO[0m | scraper:149 | [32m进度: 24/80 (30.0%) - 已用时: 14.4s - 预计剩余: 33.6s[0m
+2025-11-18 12:41:10,809 | [32m[1mINFO[0m | scraper:73 | [32m[26/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/swedish-collagen-deluxe-12500-mg-marine-collagen-500-ml-20-dose-60062461[0m
+2025-11-18 12:41:10,852 | [32m[1mINFO[0m | scraper:73 | [32m[27/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/viviscal-thickening-shampoo-250ml-60063680[0m
+2025-11-18 12:41:10,866 | [32m[1mINFO[0m | scraper:80 | [32m[21/80] 完成: Hyaluronic Acid 20mg 30 Capsules[0m
+2025-11-18 12:41:10,934 | [32m[1mINFO[0m | scraper:149 | [32m进度: 25/80 (31.2%) - 已用时: 14.7s - 预计剩余: 32.4s[0m
+2025-11-18 12:41:11,717 | [32m[1mINFO[0m | scraper:73 | [32m[31/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/solgar-selenium-yeast-free-200g-50-tablets-6100007077[0m
+2025-11-18 12:41:12,006 | [32m[1mINFO[0m | scraper:73 | [32m[33/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-marine-collagen-with-vitamin-c-90-tablets-6100005878[0m
+2025-11-18 12:41:13,580 | [31m[1mERROR[0m | scraper:85 | [31m[29/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:13,580 | [32m[1mINFO[0m | scraper:149 | [32m进度: 26/80 (32.5%) - 已用时: 17.4s - 预计剩余: 36.1s[0m
+2025-11-18 12:41:13,890 | [31m[1mERROR[0m | scraper:85 | [31m[28/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:13,890 | [32m[1mINFO[0m | scraper:149 | [32m进度: 27/80 (33.8%) - 已用时: 17.7s - 预计剩余: 34.7s[0m
+2025-11-18 12:41:14,060 | [31m[1mERROR[0m | scraper:85 | [31m[32/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:14,060 | [32m[1mINFO[0m | scraper:149 | [32m进度: 28/80 (35.0%) - 已用时: 17.8s - 预计剩余: 33.1s[0m
+2025-11-18 12:41:14,398 | [32m[1mINFO[0m | scraper:80 | [32m[26/80] 完成: Deluxe 12,500mg Marine Collagen 500ml 20[0m
+2025-11-18 12:41:14,462 | [32m[1mINFO[0m | scraper:80 | [32m[27/80] 完成: Thickening Shampoo 250ml[0m
+2025-11-18 12:41:14,485 | [32m[1mINFO[0m | scraper:149 | [32m进度: 29/80 (36.2%) - 已用时: 18.3s - 预计剩余: 32.1s[0m
+2025-11-18 12:41:14,536 | [32m[1mINFO[0m | scraper:149 | [32m进度: 30/80 (37.5%) - 已用时: 18.3s - 预计剩余: 30.5s[0m
+2025-11-18 12:41:15,200 | [32m[1mINFO[0m | scraper:73 | [32m[35/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-nails-formula-30-tablets-6100008955[0m
+2025-11-18 12:41:15,889 | [32m[1mINFO[0m | scraper:73 | [32m[38/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/hairburst-shampoo-x-350ml-conditioner-x-350ml-set-60049389[0m
+2025-11-18 12:41:16,815 | [32m[1mINFO[0m | scraper:80 | [32m[19/80] 完成: Beauty Collagen 60 Strawberry Gummies[0m
+2025-11-18 12:41:16,899 | [32m[1mINFO[0m | scraper:149 | [32m进度: 31/80 (38.8%) - 已用时: 20.7s - 预计剩余: 32.7s[0m
+2025-11-18 12:41:17,208 | [31m[1mERROR[0m | scraper:85 | [31m[34/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:17,209 | [32m[1mINFO[0m | scraper:149 | [32m进度: 32/80 (40.0%) - 已用时: 21.0s - 预计剩余: 31.5s[0m
+2025-11-18 12:41:17,696 | [31m[1mERROR[0m | scraper:85 | [31m[36/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:17,698 | [32m[1mINFO[0m | scraper:149 | [32m进度: 33/80 (41.2%) - 已用时: 21.5s - 预计剩余: 30.6s[0m
+2025-11-18 12:41:17,740 | [31m[1mERROR[0m | scraper:85 | [31m[37/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:17,740 | [32m[1mINFO[0m | scraper:149 | [32m进度: 34/80 (42.5%) - 已用时: 21.5s - 预计剩余: 29.1s[0m
+2025-11-18 12:41:18,270 | [32m[1mINFO[0m | scraper:80 | [32m[31/80] 完成: Selenium (Yeast-Free) 200µg 50 Tablets[0m
+2025-11-18 12:41:18,354 | [32m[1mINFO[0m | scraper:149 | [32m进度: 35/80 (43.8%) - 已用时: 22.1s - 预计剩余: 28.5s[0m
+2025-11-18 12:41:18,552 | [32m[1mINFO[0m | scraper:80 | [32m[35/80] 完成: Skin, Hair & Nails Formula 30 Tablets[0m
+2025-11-18 12:41:18,625 | [32m[1mINFO[0m | scraper:149 | [32m进度: 36/80 (45.0%) - 已用时: 22.4s - 预计剩余: 27.4s[0m
+2025-11-18 12:41:19,044 | [32m[1mINFO[0m | scraper:73 | [32m[41/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-vitamin-e-400iu-30-capsules-6100006807[0m
+2025-11-18 12:41:20,495 | [31m[1mERROR[0m | scraper:85 | [31m[40/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:20,497 | [32m[1mINFO[0m | scraper:149 | [32m进度: 37/80 (46.2%) - 已用时: 24.3s - 预计剩余: 28.2s[0m
+2025-11-18 12:41:20,691 | [31m[1mERROR[0m | scraper:85 | [31m[39/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:20,692 | [32m[1mINFO[0m | scraper:149 | [32m进度: 38/80 (47.5%) - 已用时: 24.5s - 预计剩余: 27.0s[0m
+2025-11-18 12:41:20,968 | [31m[1mERROR[0m | scraper:85 | [31m[42/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:20,969 | [32m[1mINFO[0m | scraper:149 | [32m进度: 39/80 (48.8%) - 已用时: 24.7s - 预计剩余: 26.0s[0m
+2025-11-18 12:41:21,235 | [31m[1mERROR[0m | scraper:85 | [31m[47/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:21,236 | [32m[1mINFO[0m | scraper:149 | [32m进度: 40/80 (50.0%) - 已用时: 25.0s - 预计剩余: 25.0s[0m
+2025-11-18 12:41:21,611 | [31m[1mERROR[0m | scraper:85 | [31m[43/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:21,612 | [32m[1mINFO[0m | scraper:149 | [32m进度: 41/80 (51.2%) - 已用时: 25.4s - 预计剩余: 24.2s[0m
+2025-11-18 12:41:21,899 | [32m[1mINFO[0m | scraper:80 | [32m[33/80] 完成: Marine Collagen with Vitamin C 90 Tablet[0m
+2025-11-18 12:41:21,945 | [32m[1mINFO[0m | scraper:73 | [32m[46/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/new-nordic-hair-volume-tablets-6100153440[0m
+2025-11-18 12:41:21,980 | [32m[1mINFO[0m | scraper:149 | [32m进度: 42/80 (52.5%) - 已用时: 25.8s - 预计剩余: 23.3s[0m
+2025-11-18 12:41:22,187 | [31m[1mERROR[0m | scraper:85 | [31m[44/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:22,188 | [32m[1mINFO[0m | scraper:149 | [32m进度: 43/80 (53.8%) - 已用时: 26.0s - 预计剩余: 22.3s[0m
+2025-11-18 12:41:22,421 | [32m[1mINFO[0m | scraper:80 | [32m[41/80] 完成: Vitamin E 400iu 30 Capsules[0m
+2025-11-18 12:41:22,498 | [32m[1mINFO[0m | scraper:149 | [32m进度: 44/80 (55.0%) - 已用时: 26.3s - 预计剩余: 21.5s[0m
+2025-11-18 12:41:22,826 | [32m[1mINFO[0m | scraper:80 | [32m[38/80] 完成: Shampoo x 350ml & Conditioner x 350ml Se[0m
+2025-11-18 12:41:22,905 | [32m[1mINFO[0m | scraper:149 | [32m进度: 45/80 (56.2%) - 已用时: 26.7s - 预计剩余: 20.8s[0m
+2025-11-18 12:41:22,945 | [32m[1mINFO[0m | scraper:73 | [32m[49/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/vitabiotics-jointace-collagen-tablets-60076074[0m
+2025-11-18 12:41:23,801 | [31m[1mERROR[0m | scraper:85 | [31m[45/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:23,802 | [32m[1mINFO[0m | scraper:149 | [32m进度: 46/80 (57.5%) - 已用时: 27.6s - 预计剩余: 20.4s[0m
+2025-11-18 12:41:23,861 | [32m[1mINFO[0m | scraper:73 | [32m[52/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/4her-hair-supplements-for-women-60-vegan-tablets-6100006866[0m
+2025-11-18 12:41:24,842 | [31m[1mERROR[0m | scraper:85 | [31m[48/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:24,843 | [32m[1mINFO[0m | scraper:149 | [32m进度: 47/80 (58.8%) - 已用时: 28.6s - 预计剩余: 20.1s[0m
+2025-11-18 12:41:25,100 | [31m[1mERROR[0m | scraper:85 | [31m[51/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:25,101 | [32m[1mINFO[0m | scraper:73 | [32m[54/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/novomins-collagen-sugar-free-peach-flavoured-60-gummies-6100006984[0m
+2025-11-18 12:41:25,103 | [32m[1mINFO[0m | scraper:149 | [32m进度: 48/80 (60.0%) - 已用时: 28.9s - 预计剩余: 19.3s[0m
+2025-11-18 12:41:25,113 | [31m[1mERROR[0m | scraper:85 | [31m[53/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:25,114 | [32m[1mINFO[0m | scraper:149 | [32m进度: 49/80 (61.3%) - 已用时: 28.9s - 预计剩余: 18.3s[0m
+2025-11-18 12:41:25,117 | [31m[1mERROR[0m | scraper:85 | [31m[50/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:25,118 | [32m[1mINFO[0m | scraper:149 | [32m进度: 50/80 (62.5%) - 已用时: 28.9s - 预计剩余: 17.3s[0m
+2025-11-18 12:41:25,306 | [32m[1mINFO[0m | scraper:80 | [32m[46/80] 完成: Hair Volume 90 Tablets[0m
+2025-11-18 12:41:25,379 | [32m[1mINFO[0m | scraper:149 | [32m进度: 51/80 (63.7%) - 已用时: 29.2s - 预计剩余: 16.6s[0m
+2025-11-18 12:41:26,177 | [32m[1mINFO[0m | scraper:73 | [32m[55/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/new-nordic-hair-volume-tablets-60078924[0m
+2025-11-18 12:41:26,298 | [32m[1mINFO[0m | scraper:73 | [32m[56/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-hair-vitamins-120-tablets-6100008609[0m
+2025-11-18 12:41:26,445 | [32m[1mINFO[0m | scraper:73 | [32m[58/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/dose-co-hair-scalp-support-30-capsules-6100007064[0m
+2025-11-18 12:41:26,585 | [32m[1mINFO[0m | scraper:80 | [32m[49/80] 完成: Jointace Collagen 30 Tablets[0m
+2025-11-18 12:41:26,704 | [32m[1mINFO[0m | scraper:149 | [32m进度: 52/80 (65.0%) - 已用时: 30.5s - 预计剩余: 16.4s[0m
+2025-11-18 12:41:26,743 | [32m[1mINFO[0m | scraper:73 | [32m[59/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/revive-collagen-enhanced-plus-premium-liquid-marine-collagen-drink-sachets-10000mgs-60060062[0m
+2025-11-18 12:41:26,753 | [32m[1mINFO[0m | scraper:73 | [32m[57/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/vida-glow-hairology-food-supplement-30-capsules-6100008259[0m
+2025-11-18 12:41:27,210 | [32m[1mINFO[0m | scraper:80 | [32m[52/80] 完成: 4Her Hair Supplements For Women 60 Vegan[0m
+2025-11-18 12:41:27,299 | [32m[1mINFO[0m | scraper:149 | [32m进度: 53/80 (66.2%) - 已用时: 31.1s - 预计剩余: 15.8s[0m
+2025-11-18 12:41:28,155 | [32m[1mINFO[0m | scraper:73 | [32m[60/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/vital-proteins-collagen-peptides-unflavoured-6100148487[0m
+2025-11-18 12:41:28,475 | [32m[1mINFO[0m | scraper:80 | [32m[54/80] 完成: Collagen Sugar-Free Peach Flavoured 60 G[0m
+2025-11-18 12:41:28,567 | [32m[1mINFO[0m | scraper:149 | [32m进度: 54/80 (67.5%) - 已用时: 32.3s - 预计剩余: 15.6s[0m
+2025-11-18 12:41:28,576 | [32m[1mINFO[0m | scraper:73 | [32m[61/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/pura-collagen-glow-bovine-284g-60062608[0m
+2025-11-18 12:41:29,786 | [32m[1mINFO[0m | scraper:80 | [32m[55/80] 完成: Hair Volume 30 Tablets[0m
+2025-11-18 12:41:29,800 | [32m[1mINFO[0m | scraper:80 | [32m[58/80] 完成: Hair & Scalp Support 30 Capsules[0m
+2025-11-18 12:41:29,855 | [32m[1mINFO[0m | scraper:80 | [32m[56/80] 完成: Hair Vitamins 120 Tablets[0m
+2025-11-18 12:41:29,909 | [32m[1mINFO[0m | scraper:149 | [32m进度: 55/80 (68.8%) - 已用时: 33.7s - 预计剩余: 15.3s[0m
+2025-11-18 12:41:29,916 | [32m[1mINFO[0m | scraper:149 | [32m进度: 56/80 (70.0%) - 已用时: 33.7s - 预计剩余: 14.4s[0m
+2025-11-18 12:41:29,948 | [32m[1mINFO[0m | scraper:149 | [32m进度: 57/80 (71.2%) - 已用时: 33.7s - 预计剩余: 13.6s[0m
+2025-11-18 12:41:29,997 | [32m[1mINFO[0m | scraper:73 | [32m[62/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-120-tablets-300ug-6100008959[0m
+2025-11-18 12:41:30,225 | [31m[1mERROR[0m | scraper:85 | [31m[65/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:30,226 | [32m[1mINFO[0m | scraper:149 | [32m进度: 58/80 (72.5%) - 已用时: 34.0s - 预计剩余: 12.9s[0m
+2025-11-18 12:41:30,278 | [32m[1mINFO[0m | scraper:80 | [32m[59/80] 完成: Enhanced Plus Premium Liquid Marine Coll[0m
+2025-11-18 12:41:30,353 | [32m[1mINFO[0m | scraper:149 | [32m进度: 59/80 (73.8%) - 已用时: 34.1s - 预计剩余: 12.1s[0m
+2025-11-18 12:41:30,470 | [31m[1mERROR[0m | scraper:85 | [31m[66/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:30,470 | [32m[1mINFO[0m | scraper:149 | [32m进度: 60/80 (75.0%) - 已用时: 34.2s - 预计剩余: 11.4s[0m
+2025-11-18 12:41:30,487 | [32m[1mINFO[0m | scraper:80 | [32m[57/80] 完成: Hairology Food Supplement 30 Capsules[0m
+2025-11-18 12:41:30,562 | [32m[1mINFO[0m | scraper:149 | [32m进度: 61/80 (76.2%) - 已用时: 34.3s - 预计剩余: 10.7s[0m
+2025-11-18 12:41:31,326 | [32m[1mINFO[0m | scraper:73 | [32m[64/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/nature-s-bounty-beautiful-skin-rasberry-flavour-vegan-gummies-60060162[0m
+2025-11-18 12:41:31,347 | [32m[1mINFO[0m | scraper:73 | [32m[63/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-acne-relief-tablets-60046873[0m
+2025-11-18 12:41:31,735 | [32m[1mINFO[0m | scraper:73 | [32m[69/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/dose-co-pure-collagen-567g-60061954[0m
+2025-11-18 12:41:31,736 | [32m[1mINFO[0m | scraper:80 | [32m[60/80] 完成: Collagen Peptides Unflavoured 567g[0m
+2025-11-18 12:41:31,777 | [32m[1mINFO[0m | scraper:73 | [32m[67/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/twinings-superblends-glow-60033510[0m
+2025-11-18 12:41:31,832 | [32m[1mINFO[0m | scraper:149 | [32m进度: 62/80 (77.5%) - 已用时: 35.6s - 预计剩余: 10.3s[0m
+2025-11-18 12:41:31,935 | [32m[1mINFO[0m | scraper:80 | [32m[61/80] 完成: glow+ Advanced Collagen PLUS Formula 284[0m
+2025-11-18 12:41:32,017 | [32m[1mINFO[0m | scraper:149 | [32m进度: 63/80 (78.8%) - 已用时: 35.8s - 预计剩余: 9.7s[0m
+2025-11-18 12:41:32,061 | [32m[1mINFO[0m | scraper:73 | [32m[68/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/new-nordic-hair-volume-post-menopause-30-tablets-6100002184[0m
+2025-11-18 12:41:33,332 | [32m[1mINFO[0m | scraper:73 | [32m[71/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/nourkrin-woman-hair-nutrition-programme-tablets-60070509[0m
+2025-11-18 12:41:33,347 | [32m[1mINFO[0m | scraper:73 | [32m[70/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-bovine-collagen-strawberry-60-gummies-6100005868[0m
+2025-11-18 12:41:33,586 | [32m[1mINFO[0m | scraper:80 | [32m[62/80] 完成: Biotin 120 Tablets 300ug[0m
+2025-11-18 12:41:33,668 | [32m[1mINFO[0m | scraper:149 | [32m进度: 64/80 (80.0%) - 已用时: 37.4s - 预计剩余: 9.4s[0m
+2025-11-18 12:41:34,854 | [32m[1mINFO[0m | scraper:80 | [32m[64/80] 完成: Beautiful Skin Raspberry Flavour 60 Gumm[0m
+2025-11-18 12:41:34,915 | [32m[1mINFO[0m | scraper:80 | [32m[63/80] 完成: Acne Relief 60 Tablets[0m
+2025-11-18 12:41:34,948 | [32m[1mINFO[0m | scraper:149 | [32m进度: 65/80 (81.2%) - 已用时: 38.7s - 预计剩余: 8.9s[0m
+2025-11-18 12:41:35,020 | [32m[1mINFO[0m | scraper:149 | [32m进度: 66/80 (82.5%) - 已用时: 38.8s - 预计剩余: 8.2s[0m
+2025-11-18 12:41:35,028 | [32m[1mINFO[0m | scraper:73 | [32m[72/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/dr-organic-100-pure-castor-oil-250ml-6100004492[0m
+2025-11-18 12:41:35,226 | [31m[1mERROR[0m | scraper:85 | [31m[73/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:35,226 | [32m[1mINFO[0m | scraper:149 | [32m进度: 67/80 (83.8%) - 已用时: 39.0s - 预计剩余: 7.6s[0m
+2025-11-18 12:41:35,268 | [32m[1mINFO[0m | scraper:80 | [32m[67/80] 完成: Superblends Glow 20 Tea Bags[0m
+2025-11-18 12:41:35,342 | [32m[1mINFO[0m | scraper:80 | [32m[69/80] 完成: Pure Collagen 567g[0m
+2025-11-18 12:41:35,356 | [32m[1mINFO[0m | scraper:149 | [32m进度: 68/80 (85.0%) - 已用时: 39.1s - 预计剩余: 6.9s[0m
+2025-11-18 12:41:35,414 | [32m[1mINFO[0m | scraper:80 | [32m[68/80] 完成: Hair Volume Post Menopause 30 Tablets[0m
+2025-11-18 12:41:35,425 | [32m[1mINFO[0m | scraper:149 | [32m进度: 69/80 (86.2%) - 已用时: 39.2s - 预计剩余: 6.2s[0m
+2025-11-18 12:41:35,486 | [32m[1mINFO[0m | scraper:149 | [32m进度: 70/80 (87.5%) - 已用时: 39.3s - 预计剩余: 5.6s[0m
+2025-11-18 12:41:35,734 | [31m[1mERROR[0m | scraper:85 | [31m[78/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:35,734 | [32m[1mINFO[0m | scraper:149 | [32m进度: 71/80 (88.8%) - 已用时: 39.5s - 预计剩余: 5.0s[0m
+2025-11-18 12:41:36,007 | [31m[1mERROR[0m | scraper:85 | [31m[77/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:36,007 | [32m[1mINFO[0m | scraper:149 | [32m进度: 72/80 (90.0%) - 已用时: 39.8s - 预计剩余: 4.4s[0m
+2025-11-18 12:41:36,405 | [32m[1mINFO[0m | scraper:73 | [32m[75/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-vitamin-e-400iu-120-capsules-6100006793[0m
+2025-11-18 12:41:36,418 | [32m[1mINFO[0m | scraper:73 | [32m[74/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/nourish3d-hair-boost-nutrient-stacks-30-gummies-6100006410[0m
+2025-11-18 12:41:36,656 | [31m[1mERROR[0m | scraper:85 | [31m[80/80] 失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:41:36,657 | [32m[1mINFO[0m | scraper:149 | [32m进度: 73/80 (91.2%) - 已用时: 40.4s - 预计剩余: 3.9s[0m
+2025-11-18 12:41:36,677 | [32m[1mINFO[0m | scraper:73 | [32m[76/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/starpowa-vegan-collagen-support-gummies-60048530[0m
+2025-11-18 12:41:36,738 | [32m[1mINFO[0m | scraper:80 | [32m[70/80] 完成: Bovine Collagen Strawberry 60 Gummies[0m
+2025-11-18 12:41:36,739 | [32m[1mINFO[0m | scraper:80 | [32m[71/80] 完成: Woman Hair Nutrition 1 Month Supply 60 T[0m
+2025-11-18 12:41:36,853 | [32m[1mINFO[0m | scraper:149 | [32m进度: 74/80 (92.5%) - 已用时: 40.6s - 预计剩余: 3.3s[0m
+2025-11-18 12:41:36,854 | [32m[1mINFO[0m | scraper:149 | [32m进度: 75/80 (93.8%) - 已用时: 40.6s - 预计剩余: 2.7s[0m
+2025-11-18 12:41:36,864 | [32m[1mINFO[0m | scraper:73 | [32m[79/80] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-zinc-25mg-120-tablets-6100006797[0m
+2025-11-18 12:41:38,384 | [32m[1mINFO[0m | scraper:80 | [32m[72/80] 完成: 100% Pure Castor Oil 250ml[0m
+2025-11-18 12:41:38,475 | [32m[1mINFO[0m | scraper:149 | [32m进度: 76/80 (95.0%) - 已用时: 42.3s - 预计剩余: 2.2s[0m
+2025-11-18 12:41:39,970 | [32m[1mINFO[0m | scraper:80 | [32m[75/80] 完成: Natural Vitamin E 400iu 120 Capsules[0m
+2025-11-18 12:41:40,047 | [32m[1mINFO[0m | scraper:80 | [32m[76/80] 完成: Vegan Collagen Support 60 Gummies[0m
+2025-11-18 12:41:40,052 | [32m[1mINFO[0m | scraper:149 | [32m进度: 77/80 (96.2%) - 已用时: 43.8s - 预计剩余: 1.7s[0m
+2025-11-18 12:41:40,125 | [32m[1mINFO[0m | scraper:149 | [32m进度: 78/80 (97.5%) - 已用时: 43.9s - 预计剩余: 1.1s[0m
+2025-11-18 12:41:40,218 | [32m[1mINFO[0m | scraper:80 | [32m[79/80] 完成: Zinc 25mg 120 Tablets[0m
+2025-11-18 12:41:40,293 | [32m[1mINFO[0m | scraper:80 | [32m[74/80] 完成: Hair+ Boost Nutrient Stacks 30 Gummies[0m
+2025-11-18 12:41:40,315 | [32m[1mINFO[0m | scraper:149 | [32m进度: 79/80 (98.8%) - 已用时: 44.1s - 预计剩余: 0.6s[0m
+2025-11-18 12:41:40,374 | [32m[1mINFO[0m | scraper:149 | [32m进度: 80/80 (100.0%) - 已用时: 44.2s - 预计剩余: 0.0s[0m
+2025-11-18 12:41:40,374 | [32m[1mINFO[0m | scraper:160 | [32m并行爬取完成! 总耗时: 44.2s, 平均速度: 0.55s/项[0m
+2025-11-18 12:48:06,412 | [32m[1mINFO[0m | scraper:186 | [32m开始并行爬取 120 个项目
+  - 线程数: 3
+  - 重试次数: 3
+  - 请求延迟: 2-4秒[0m
+2025-11-18 12:48:10,352 | [32m[1mINFO[0m | scraper:129 | [32m[1/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/starpowa-hair-skin-and-nail-gummies-60036102[0m
+2025-11-18 12:48:10,361 | [32m[1mINFO[0m | scraper:129 | [32m[2/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/vitabiotics-perfectil-tablets-60013790[0m
+2025-11-18 12:48:11,668 | [32m[1mINFO[0m | scraper:129 | [32m[3/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/viviscal-healthy-hair-vitamins-30-tablets-6100000423[0m
+2025-11-18 12:48:22,968 | [32m[1mINFO[0m | scraper:136 | [32m[3/120] ✓ 完成: Healthy Hair Vitamins 180 Tablets[0m
+2025-11-18 12:48:25,274 | [32m[1mINFO[0m | scraper:136 | [32m[1/120] ✓ 完成: Hair, Skin and Nail 60 Gummies[0m
+2025-11-18 12:48:25,872 | [32m[1mINFO[0m | scraper:136 | [32m[2/120] ✓ 完成: Perfectil 30 Tablets[0m
+2025-11-18 12:48:27,015 | [33m[1mWARNING[0m | scraper:145 | [33m[4/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:48:28,724 | [33m[1mWARNING[0m | scraper:125 | [33m[4/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-nails-formula-90-tablets-6100008960[0m
+2025-11-18 12:48:30,040 | [32m[1mINFO[0m | scraper:129 | [32m[5/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/hairburst-chewable-heart-hair-vitamins-1-month-supply-60010813[0m
+2025-11-18 12:48:30,673 | [32m[1mINFO[0m | scraper:129 | [32m[6/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-hair-high-strength-complex-30-capsules-6100008623[0m
+2025-11-18 12:48:39,585 | [32m[1mINFO[0m | scraper:136 | [32m[4/120] ✓ 完成: Skin, Hair & Nails Formula 90 Tablets[0m
+2025-11-18 12:48:41,454 | [32m[1mINFO[0m | scraper:136 | [32m[5/120] ✓ 完成: Chewable Hair Vitamins 30 Day Supply 60 [0m
+2025-11-18 12:48:41,454 | [32m[1mINFO[0m | scraper:235 | [32m进度: 5/120 (4.2%) - 成功: 5, 失败: 0 - 已用时: 35.0s - 预计剩余: 805.9s[0m
+2025-11-18 12:48:42,693 | [32m[1mINFO[0m | scraper:136 | [32m[6/120] ✓ 完成: Biotin Hair High Strength Complex 30 Cap[0m
+2025-11-18 12:48:45,780 | [33m[1mWARNING[0m | scraper:145 | [33m[7/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:48:46,390 | [32m[1mINFO[0m | scraper:129 | [32m[8/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/nature-s-bounty-hair-skin-and-nails-with-biotin-60-gummies-60060158[0m
+2025-11-18 12:48:47,044 | [32m[1mINFO[0m | scraper:129 | [32m[9/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-hair-vitamin-pineapple-flavour-60-gummies-6100008620[0m
+2025-11-18 12:48:47,189 | [33m[1mWARNING[0m | scraper:125 | [33m[7/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-tablets-1000ug-6100130004[0m
+2025-11-18 12:48:59,661 | [32m[1mINFO[0m | scraper:136 | [32m[8/120] ✓ 完成: ® Hair, Skin and Nails with Biotin 60 Gu[0m
+2025-11-18 12:49:01,080 | [32m[1mINFO[0m | scraper:136 | [32m[7/120] ✓ 完成: Biotin 1000ug 120 Tablets[0m
+2025-11-18 12:49:03,764 | [32m[1mINFO[0m | scraper:136 | [32m[9/120] ✓ 完成: Hair Vitamin Pineapple Flavour 60 Gummie[0m
+2025-11-18 12:49:04,024 | [32m[1mINFO[0m | scraper:129 | [32m[10/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-tablets-1000ug-6100130003[0m
+2025-11-18 12:49:07,850 | [33m[1mWARNING[0m | scraper:145 | [33m[11/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:49:10,933 | [33m[1mWARNING[0m | scraper:145 | [33m[12/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:49:11,099 | [33m[1mWARNING[0m | scraper:145 | [33m[11/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:49:12,384 | [33m[1mWARNING[0m | scraper:125 | [33m[12/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/holland-barrett-ultra-woman-daily-multi-caplets-6100005249[0m
+2025-11-18 12:49:12,874 | [33m[1mWARNING[0m | scraper:125 | [33m[11/120] 重试 3/3: https://www.hollandandbarrett.com/shop/product/vitabiotics-perfectil-max-capsules-60012089[0m
+2025-11-18 12:49:24,687 | [32m[1mINFO[0m | scraper:136 | [32m[11/120] ✓ 完成: Perfectil Max 84 Capsules[0m
+2025-11-18 12:49:24,737 | [32m[1mINFO[0m | scraper:136 | [32m[10/120] ✓ 完成: Biotin 1000ug 60 Tablets[0m
+2025-11-18 12:49:24,738 | [32m[1mINFO[0m | scraper:235 | [32m进度: 10/120 (8.3%) - 成功: 10, 失败: 0 - 已用时: 78.3s - 预计剩余: 861.6s[0m
+2025-11-18 12:49:28,600 | [32m[1mINFO[0m | scraper:129 | [32m[14/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-and-nails-vegan-pineapple-flavour-60-gummies-6100008618[0m
+2025-11-18 12:49:29,699 | [32m[1mINFO[0m | scraper:129 | [32m[13/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-marine-collagen-with-vitamin-c-180-tablets-6100005877[0m
+2025-11-18 12:49:30,463 | [32m[1mINFO[0m | scraper:136 | [32m[12/120] ✓ 完成: Ultra Woman 90 Tablets[0m
+2025-11-18 12:49:35,615 | [32m[1mINFO[0m | scraper:129 | [32m[15/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-nails-formula-180-tablets-6100008961[0m
+2025-11-18 12:49:37,490 | [32m[1mINFO[0m | scraper:136 | [32m[13/120] ✓ 完成: Marine Collagen with Vitamin C 180 Table[0m
+2025-11-18 12:49:40,789 | [32m[1mINFO[0m | scraper:136 | [32m[14/120] ✓ 完成: Skin Hair And Nails Vegan Pineapple Flav[0m
+2025-11-18 12:49:41,233 | [32m[1mINFO[0m | scraper:129 | [32m[16/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/centred-tender-love-and-hair-60-capsules-6100009763[0m
+2025-11-18 12:49:42,876 | [32m[1mINFO[0m | scraper:136 | [32m[15/120] ✓ 完成: Skin, Hair & Nails Formula 180 Tablets[0m
+2025-11-18 12:49:42,877 | [32m[1mINFO[0m | scraper:235 | [32m进度: 15/120 (12.5%) - 成功: 15, 失败: 0 - 已用时: 96.5s - 预计剩余: 675.2s[0m
+2025-11-18 12:49:46,691 | [32m[1mINFO[0m | scraper:129 | [32m[18/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/solgar-skin-nails-and-hair-formula-tablets-60001411[0m
+2025-11-18 12:49:46,881 | [33m[1mWARNING[0m | scraper:145 | [33m[17/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:49:50,125 | [33m[1mWARNING[0m | scraper:145 | [33m[17/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:49:53,699 | [31m[1mERROR[0m | scraper:150 | [31m[17/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:49:56,164 | [32m[1mINFO[0m | scraper:136 | [32m[16/120] ✓ 完成: Centred. Tender Love And Hair 60 Capsule[0m
+2025-11-18 12:49:58,428 | [32m[1mINFO[0m | scraper:129 | [32m[19/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/bioglan-beauty-collagen-60049202[0m
+2025-11-18 12:50:02,052 | [33m[1mWARNING[0m | scraper:145 | [33m[20/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:50:03,448 | [33m[1mWARNING[0m | scraper:125 | [33m[20/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/viviscal-healthy-hair-vitamins-30-tablets-6100000422[0m
+2025-11-18 12:50:05,506 | [32m[1mINFO[0m | scraper:136 | [32m[18/120] ✓ 完成: Skin, Nails and Hair Formula 60 Tablets[0m
+2025-11-18 12:50:11,317 | [33m[1mWARNING[0m | scraper:145 | [33m[21/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:50:14,609 | [33m[1mWARNING[0m | scraper:145 | [33m[21/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:50:17,898 | [31m[1mERROR[0m | scraper:150 | [31m[21/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:50:21,620 | [32m[1mINFO[0m | scraper:136 | [32m[19/120] ✓ 完成: Beauty Collagen 60 Strawberry Gummies[0m
+2025-11-18 12:50:21,620 | [32m[1mINFO[0m | scraper:235 | [32m进度: 20/120 (16.7%) - 成功: 18, 失败: 2 - 已用时: 135.2s - 预计剩余: 676.0s[0m
+2025-11-18 12:50:23,472 | [33m[1mWARNING[0m | scraper:145 | [33m[22/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:50:25,837 | [33m[1mWARNING[0m | scraper:145 | [33m[22/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:50:25,884 | [33m[1mWARNING[0m | scraper:145 | [33m[23/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:50:27,075 | [32m[1mINFO[0m | scraper:136 | [32m[20/120] ✓ 完成: Healthy Hair Vitamins 60 Tablets[0m
+2025-11-18 12:50:27,406 | [33m[1mWARNING[0m | scraper:125 | [33m[22/120] 重试 3/3: https://www.hollandandbarrett.com/shop/product/nourkrin-woman-180-tablets-3-month-supply-60062474[0m
+2025-11-18 12:50:27,414 | [33m[1mWARNING[0m | scraper:125 | [33m[23/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/novomins-collagen-peach-flavoured-60-gummies-6100007001[0m
+2025-11-18 12:50:31,119 | [32m[1mINFO[0m | scraper:129 | [32m[24/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/vitabiotics-perfectil-plus-hair-tablets-60011883[0m
+2025-11-18 12:50:38,630 | [32m[1mINFO[0m | scraper:136 | [32m[22/120] ✓ 完成: Woman 180 Tablets 3 Month Supply[0m
+2025-11-18 12:50:40,714 | [32m[1mINFO[0m | scraper:136 | [32m[23/120] ✓ 完成: Collagen Peach Flavoured 60 Gummies[0m
+2025-11-18 12:50:41,770 | [32m[1mINFO[0m | scraper:136 | [32m[24/120] ✓ 完成: Perfectil Plus Hair 60 Tablets[0m
+2025-11-18 12:50:43,728 | [32m[1mINFO[0m | scraper:129 | [32m[25/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/wild-nutrition-complete-beauty-support-60-capsules-6100006183[0m
+2025-11-18 12:50:45,449 | [32m[1mINFO[0m | scraper:129 | [32m[26/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/swedish-collagen-deluxe-12500-mg-marine-collagen-500-ml-20-dose-60062461[0m
+2025-11-18 12:50:45,457 | [32m[1mINFO[0m | scraper:129 | [32m[27/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/viviscal-thickening-shampoo-250ml-60063680[0m
+2025-11-18 12:50:55,598 | [32m[1mINFO[0m | scraper:136 | [32m[25/120] ✓ 完成: Complete Beauty Support 60 Capsules[0m
+2025-11-18 12:50:55,600 | [32m[1mINFO[0m | scraper:235 | [32m进度: 25/120 (20.8%) - 成功: 23, 失败: 2 - 已用时: 169.2s - 预计剩余: 642.9s[0m
+2025-11-18 12:50:56,083 | [32m[1mINFO[0m | scraper:136 | [32m[27/120] ✓ 完成: Thickening Shampoo 250ml[0m
+2025-11-18 12:50:57,263 | [32m[1mINFO[0m | scraper:136 | [32m[26/120] ✓ 完成: Deluxe 12,500mg Marine Collagen 500ml 20[0m
+2025-11-18 12:51:00,136 | [32m[1mINFO[0m | scraper:129 | [32m[29/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-bovine-collagen-180-tablets-6100005781[0m
+2025-11-18 12:51:00,380 | [32m[1mINFO[0m | scraper:129 | [32m[28/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/hri-clear-complexion-tablets-60032418[0m
+2025-11-18 12:51:00,991 | [32m[1mINFO[0m | scraper:129 | [32m[30/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/novomins-orange-flavoured-beauty-60-gummies-6100006995[0m
+2025-11-18 12:51:12,617 | [32m[1mINFO[0m | scraper:136 | [32m[29/120] ✓ 完成: Bovine Collagen 3000mg 180 Tablets[0m
+2025-11-18 12:51:14,298 | [32m[1mINFO[0m | scraper:136 | [32m[28/120] ✓ 完成: Clear Complexion 60 Tablets[0m
+2025-11-18 12:51:17,380 | [32m[1mINFO[0m | scraper:136 | [32m[30/120] ✓ 完成: Hair, Skin & Nails Orange Flavoured 60 G[0m
+2025-11-18 12:51:17,380 | [32m[1mINFO[0m | scraper:235 | [32m进度: 30/120 (25.0%) - 成功: 28, 失败: 2 - 已用时: 191.0s - 预计剩余: 572.9s[0m
+2025-11-18 12:51:18,102 | [32m[1mINFO[0m | scraper:129 | [32m[32/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-selenium-200ug-240-tablets-6100008615[0m
+2025-11-18 12:51:19,579 | [33m[1mWARNING[0m | scraper:145 | [33m[31/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:51:21,026 | [33m[1mWARNING[0m | scraper:125 | [33m[31/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/solgar-selenium-yeast-free-200g-50-tablets-6100007077[0m
+2025-11-18 12:51:24,610 | [33m[1mWARNING[0m | scraper:145 | [33m[33/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:51:25,128 | [33m[1mWARNING[0m | scraper:145 | [33m[33/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:51:26,683 | [33m[1mWARNING[0m | scraper:125 | [33m[33/120] 重试 3/3: https://www.hollandandbarrett.com/shop/product/holland-barrett-marine-collagen-with-vitamin-c-90-tablets-6100005878[0m
+2025-11-18 12:51:35,035 | [32m[1mINFO[0m | scraper:136 | [32m[32/120] ✓ 完成: Selenium 200ug 240 Tablets[0m
+2025-11-18 12:51:35,118 | [32m[1mINFO[0m | scraper:136 | [32m[31/120] ✓ 完成: Selenium (Yeast-Free) 200µg 50 Tablets[0m
+2025-11-18 12:51:39,000 | [32m[1mINFO[0m | scraper:129 | [32m[35/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-nails-formula-30-tablets-6100008955[0m
+2025-11-18 12:51:39,597 | [32m[1mINFO[0m | scraper:129 | [32m[34/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-bovine-collagen-30-tablets-6100005780[0m
+2025-11-18 12:51:41,162 | [32m[1mINFO[0m | scraper:136 | [32m[33/120] ✓ 完成: Marine Collagen with Vitamin C 90 Tablet[0m
+2025-11-18 12:51:44,714 | [32m[1mINFO[0m | scraper:129 | [32m[36/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/zooki-liposomal-glutathione-500mg-capsules-60-capsules-6100005099[0m
+2025-11-18 12:51:48,750 | [32m[1mINFO[0m | scraper:136 | [32m[35/120] ✓ 完成: Skin, Hair & Nails Formula 30 Tablets[0m
+2025-11-18 12:51:51,109 | [32m[1mINFO[0m | scraper:136 | [32m[34/120] ✓ 完成: Bovine Collagen 3000mg 30 Tablets[0m
+2025-11-18 12:51:51,110 | [32m[1mINFO[0m | scraper:235 | [32m进度: 35/120 (29.2%) - 成功: 33, 失败: 2 - 已用时: 224.7s - 预计剩余: 545.7s[0m
+2025-11-18 12:51:53,123 | [32m[1mINFO[0m | scraper:129 | [32m[37/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/new-nordic-hair-volume-supplement-gummies-60048735[0m
+2025-11-18 12:51:54,979 | [32m[1mINFO[0m | scraper:129 | [32m[38/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/hairburst-shampoo-x-350ml-conditioner-x-350ml-set-60049389[0m
+2025-11-18 12:51:56,669 | [32m[1mINFO[0m | scraper:136 | [32m[36/120] ✓ 完成: Liposomal Glutathione 500mg Capsules 60 [0m
+2025-11-18 12:52:01,995 | [32m[1mINFO[0m | scraper:129 | [32m[39/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-glow-from-within-30-capsules-6100008612[0m
+2025-11-18 12:52:11,521 | [32m[1mINFO[0m | scraper:136 | [32m[37/120] ✓ 完成: Hair Volume Supplement 60 Gummies[0m
+2025-11-18 12:52:17,417 | [32m[1mINFO[0m | scraper:136 | [32m[38/120] ✓ 完成: Shampoo x 350ml & Conditioner x 350ml Se[0m
+2025-11-18 12:52:17,658 | [33m[1mWARNING[0m | scraper:145 | [33m[40/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:52:17,798 | [32m[1mINFO[0m | scraper:136 | [32m[39/120] ✓ 完成: Skin Glow from Within 30 Capsules[0m
+2025-11-18 12:52:19,201 | [33m[1mWARNING[0m | scraper:125 | [33m[40/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/holland-barrett-vitamin-a-3300-i-u-softgel-capsules-60038578[0m
+2025-11-18 12:52:22,320 | [32m[1mINFO[0m | scraper:129 | [32m[41/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-vitamin-e-400iu-30-capsules-6100006807[0m
+2025-11-18 12:52:22,383 | [32m[1mINFO[0m | scraper:129 | [32m[42/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/solgar-collagen-hyaluronic-acid-complex-tablets-60001405[0m
+2025-11-18 12:52:26,715 | [32m[1mINFO[0m | scraper:136 | [32m[42/120] ✓ 完成: Collagen Hyaluronic Acid Complex 30 Tabl[0m
+2025-11-18 12:52:26,718 | [32m[1mINFO[0m | scraper:235 | [32m进度: 40/120 (33.3%) - 成功: 37, 失败: 3 - 已用时: 260.3s - 预计剩余: 520.6s[0m
+2025-11-18 12:52:32,276 | [32m[1mINFO[0m | scraper:129 | [32m[43/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/hairburst-hair-vitamins-for-women-35-capsules-1-month-supply-60049077[0m
+2025-11-18 12:52:34,109 | [32m[1mINFO[0m | scraper:136 | [32m[41/120] ✓ 完成: Vitamin E 400iu 30 Capsules[0m
+2025-11-18 12:52:37,394 | [32m[1mINFO[0m | scraper:136 | [32m[40/120] ✓ 完成: Vitamin A 3330IU + Vit D & Cod Liver Oil[0m
+2025-11-18 12:52:38,364 | [32m[1mINFO[0m | scraper:129 | [32m[44/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/revive-collagen-enhanced-plus-premium-liquid-marine-collagen-drink-sachets-10000mgs-6100147815[0m
+2025-11-18 12:52:42,127 | [32m[1mINFO[0m | scraper:129 | [32m[45/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/viviscal-hair-thickening-serum-50ml-60063749[0m
+2025-11-18 12:52:44,514 | [32m[1mINFO[0m | scraper:136 | [32m[43/120] ✓ 完成: Hair Vitamins for Women 35+ 60 Capsules [0m
+2025-11-18 12:52:48,172 | [32m[1mINFO[0m | scraper:136 | [32m[44/120] ✓ 完成: Enhanced Plus Premium Liquid Marine Coll[0m
+2025-11-18 12:52:49,952 | [33m[1mWARNING[0m | scraper:145 | [33m[46/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:52:51,581 | [33m[1mWARNING[0m | scraper:125 | [33m[46/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/new-nordic-hair-volume-tablets-6100153440[0m
+2025-11-18 12:52:55,821 | [33m[1mWARNING[0m | scraper:145 | [33m[47/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:52:58,372 | [32m[1mINFO[0m | scraper:136 | [32m[45/120] ✓ 完成: Hair Thickening Serum 50ml[0m
+2025-11-18 12:52:58,372 | [32m[1mINFO[0m | scraper:235 | [32m进度: 45/120 (37.5%) - 成功: 42, 失败: 3 - 已用时: 292.0s - 预计剩余: 486.6s[0m
+2025-11-18 12:53:00,485 | [33m[1mWARNING[0m | scraper:145 | [33m[47/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:53:03,325 | [32m[1mINFO[0m | scraper:129 | [32m[48/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/dose-co-marine-collagen-221g-60061950[0m
+2025-11-18 12:53:03,743 | [31m[1mERROR[0m | scraper:150 | [31m[47/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:53:10,250 | [33m[1mWARNING[0m | scraper:145 | [33m[49/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:53:12,091 | [32m[1mINFO[0m | scraper:136 | [32m[46/120] ✓ 完成: Hair Volume 90 Tablets[0m
+2025-11-18 12:53:13,980 | [33m[1mWARNING[0m | scraper:145 | [33m[49/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:53:17,610 | [31m[1mERROR[0m | scraper:150 | [31m[49/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:53:18,867 | [33m[1mWARNING[0m | scraper:145 | [33m[50/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:53:19,918 | [32m[1mINFO[0m | scraper:136 | [32m[48/120] ✓ 完成: Marine Collagen 221g[0m
+2025-11-18 12:53:20,414 | [33m[1mWARNING[0m | scraper:125 | [33m[50/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/holland-barrett-zinc-15mg-120-tablets-6100006566[0m
+2025-11-18 12:53:23,705 | [33m[1mWARNING[0m | scraper:145 | [33m[51/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:53:25,628 | [33m[1mWARNING[0m | scraper:145 | [33m[52/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:53:26,063 | [33m[1mWARNING[0m | scraper:145 | [33m[51/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:53:27,164 | [33m[1mWARNING[0m | scraper:125 | [33m[52/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/4her-hair-supplements-for-women-60-vegan-tablets-6100006866[0m
+2025-11-18 12:53:27,513 | [33m[1mWARNING[0m | scraper:125 | [33m[51/120] 重试 3/3: https://www.hollandandbarrett.com/shop/product/holland-barrett-vegan-biotin-hair-complex-30-gummies-6100008953[0m
+2025-11-18 12:53:31,526 | [32m[1mINFO[0m | scraper:136 | [32m[50/120] ✓ 完成: Zinc 15mg 120 Tablets[0m
+2025-11-18 12:53:31,529 | [32m[1mINFO[0m | scraper:235 | [32m进度: 50/120 (41.7%) - 成功: 45, 失败: 5 - 已用时: 325.1s - 预计剩余: 455.2s[0m
+2025-11-18 12:53:35,432 | [32m[1mINFO[0m | scraper:129 | [32m[53/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-zinc-25mg-240-tablets-6100006788[0m
+2025-11-18 12:53:38,981 | [32m[1mINFO[0m | scraper:136 | [32m[52/120] ✓ 完成: 4Her Hair Supplements For Women 60 Vegan[0m
+2025-11-18 12:53:40,776 | [32m[1mINFO[0m | scraper:136 | [32m[51/120] ✓ 完成: Vegan Biotin Hair Complex Berry Flavour [0m
+2025-11-18 12:53:44,053 | [32m[1mINFO[0m | scraper:129 | [32m[54/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/novomins-collagen-sugar-free-peach-flavoured-60-gummies-6100006984[0m
+2025-11-18 12:53:47,883 | [33m[1mWARNING[0m | scraper:145 | [33m[55/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:53:51,154 | [33m[1mWARNING[0m | scraper:145 | [33m[55/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:53:54,417 | [31m[1mERROR[0m | scraper:150 | [31m[55/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:53:58,039 | [32m[1mINFO[0m | scraper:136 | [32m[53/120] ✓ 完成: Zinc 25mg 240 Tablets[0m
+2025-11-18 12:53:58,751 | [32m[1mINFO[0m | scraper:136 | [32m[54/120] ✓ 完成: Collagen Sugar-Free Peach Flavoured 60 G[0m
+2025-11-18 12:53:58,751 | [32m[1mINFO[0m | scraper:235 | [32m进度: 55/120 (45.8%) - 成功: 49, 失败: 6 - 已用时: 352.3s - 预计剩余: 416.4s[0m
+2025-11-18 12:54:01,365 | [33m[1mWARNING[0m | scraper:145 | [33m[56/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:54:04,365 | [33m[1mWARNING[0m | scraper:145 | [33m[57/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:54:04,741 | [33m[1mWARNING[0m | scraper:145 | [33m[58/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:54:05,198 | [33m[1mWARNING[0m | scraper:145 | [33m[56/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:54:08,010 | [33m[1mWARNING[0m | scraper:145 | [33m[57/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:54:08,428 | [33m[1mWARNING[0m | scraper:145 | [33m[58/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:54:08,479 | [31m[1mERROR[0m | scraper:150 | [31m[56/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:54:11,640 | [31m[1mERROR[0m | scraper:150 | [31m[57/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:54:11,702 | [31m[1mERROR[0m | scraper:150 | [31m[58/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:54:13,119 | [32m[1mINFO[0m | scraper:129 | [32m[59/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/revive-collagen-enhanced-plus-premium-liquid-marine-collagen-drink-sachets-10000mgs-60060062[0m
+2025-11-18 12:54:16,333 | [32m[1mINFO[0m | scraper:129 | [32m[61/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/pura-collagen-glow-bovine-284g-60062608[0m
+2025-11-18 12:54:16,946 | [32m[1mINFO[0m | scraper:129 | [32m[60/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/vital-proteins-collagen-peptides-unflavoured-6100148487[0m
+2025-11-18 12:54:27,473 | [32m[1mINFO[0m | scraper:136 | [32m[59/120] ✓ 完成: Enhanced Plus Premium Liquid Marine Coll[0m
+2025-11-18 12:54:29,620 | [32m[1mINFO[0m | scraper:136 | [32m[61/120] ✓ 完成: glow+ Advanced Collagen PLUS Formula 284[0m
+2025-11-18 12:54:29,620 | [32m[1mINFO[0m | scraper:235 | [32m进度: 60/120 (50.0%) - 成功: 51, 失败: 9 - 已用时: 383.2s - 预计剩余: 383.2s[0m
+2025-11-18 12:54:30,815 | [32m[1mINFO[0m | scraper:136 | [32m[60/120] ✓ 完成: Collagen Peptides Unflavoured 567g[0m
+2025-11-18 12:54:32,116 | [32m[1mINFO[0m | scraper:129 | [32m[62/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-120-tablets-300ug-6100008959[0m
+2025-11-18 12:54:33,980 | [32m[1mINFO[0m | scraper:129 | [32m[63/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-acne-relief-tablets-60046873[0m
+2025-11-18 12:54:35,200 | [32m[1mINFO[0m | scraper:129 | [32m[64/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/nature-s-bounty-beautiful-skin-rasberry-flavour-vegan-gummies-60060162[0m
+2025-11-18 12:54:40,988 | [32m[1mINFO[0m | scraper:136 | [32m[62/120] ✓ 完成: Biotin 120 Tablets 300ug[0m
+2025-11-18 12:54:43,255 | [32m[1mINFO[0m | scraper:136 | [32m[63/120] ✓ 完成: Acne Relief 60 Tablets[0m
+2025-11-18 12:54:45,599 | [32m[1mINFO[0m | scraper:136 | [32m[64/120] ✓ 完成: Beautiful Skin Raspberry Flavour 60 Gumm[0m
+2025-11-18 12:54:46,300 | [32m[1mINFO[0m | scraper:129 | [32m[65/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-hyaluronic-acid-high-strength-120mg-vitamin-c-30-tablets-6100006803[0m
+2025-11-18 12:54:47,039 | [32m[1mINFO[0m | scraper:129 | [32m[66/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/wild-nutrition-collagen-500-plus-94g-6100006087[0m
+2025-11-18 12:54:50,789 | [32m[1mINFO[0m | scraper:129 | [32m[67/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/twinings-superblends-glow-60033510[0m
+2025-11-18 12:54:54,026 | [32m[1mINFO[0m | scraper:136 | [32m[65/120] ✓ 完成: Hyaluronic Acid High Strength 120mg + Vi[0m
+2025-11-18 12:54:54,027 | [32m[1mINFO[0m | scraper:235 | [32m进度: 65/120 (54.2%) - 成功: 56, 失败: 9 - 已用时: 407.6s - 预计剩余: 344.9s[0m
+2025-11-18 12:54:58,465 | [32m[1mINFO[0m | scraper:129 | [32m[68/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/new-nordic-hair-volume-post-menopause-30-tablets-6100002184[0m
+2025-11-18 12:54:58,941 | [32m[1mINFO[0m | scraper:136 | [32m[66/120] ✓ 完成: Collagen 500 Plus 94g[0m
+2025-11-18 12:55:02,407 | [32m[1mINFO[0m | scraper:136 | [32m[67/120] ✓ 完成: Superblends Glow 20 Tea Bags[0m
+2025-11-18 12:55:04,488 | [32m[1mINFO[0m | scraper:129 | [32m[69/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/dose-co-pure-collagen-567g-60061954[0m
+2025-11-18 12:55:07,159 | [32m[1mINFO[0m | scraper:129 | [32m[70/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-bovine-collagen-strawberry-60-gummies-6100005868[0m
+2025-11-18 12:55:15,014 | [32m[1mINFO[0m | scraper:136 | [32m[68/120] ✓ 完成: Hair Volume Post Menopause 30 Tablets[0m
+2025-11-18 12:55:21,181 | [33m[1mWARNING[0m | scraper:145 | [33m[71/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:23,335 | [32m[1mINFO[0m | scraper:136 | [32m[69/120] ✓ 完成: Pure Collagen 567g[0m
+2025-11-18 12:55:24,506 | [33m[1mWARNING[0m | scraper:145 | [33m[71/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:26,848 | [33m[1mWARNING[0m | scraper:145 | [33m[72/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:26,857 | [31m[1mERROR[0m | scraper:150 | [31m[71/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:55:26,858 | [32m[1mINFO[0m | scraper:235 | [32m进度: 70/120 (58.3%) - 成功: 60, 失败: 10 - 已用时: 440.4s - 预计剩余: 314.6s[0m
+2025-11-18 12:55:28,575 | [33m[1mWARNING[0m | scraper:125 | [33m[72/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/dr-organic-100-pure-castor-oil-250ml-6100004492[0m
+2025-11-18 12:55:29,751 | [32m[1mINFO[0m | scraper:136 | [32m[70/120] ✓ 完成: Bovine Collagen Strawberry 60 Gummies[0m
+2025-11-18 12:55:30,104 | [32m[1mINFO[0m | scraper:136 | [32m[72/120] ✓ 完成: 100% Pure Castor Oil 250ml[0m
+2025-11-18 12:55:30,266 | [33m[1mWARNING[0m | scraper:145 | [33m[73/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:30,628 | [33m[1mWARNING[0m | scraper:145 | [33m[73/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:30,972 | [31m[1mERROR[0m | scraper:150 | [31m[73/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:55:33,952 | [33m[1mWARNING[0m | scraper:145 | [33m[75/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:34,060 | [33m[1mWARNING[0m | scraper:145 | [33m[76/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:34,265 | [32m[1mINFO[0m | scraper:129 | [32m[74/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/nourish3d-hair-boost-nutrient-stacks-30-gummies-6100006410[0m
+2025-11-18 12:55:34,605 | [33m[1mWARNING[0m | scraper:145 | [33m[75/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:34,616 | [33m[1mWARNING[0m | scraper:145 | [33m[76/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:34,762 | [32m[1mINFO[0m | scraper:136 | [32m[74/120] ✓ 完成: Hair+ Boost Nutrient Stacks 30 Gummies[0m
+2025-11-18 12:55:34,983 | [31m[1mERROR[0m | scraper:150 | [31m[75/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:55:34,984 | [32m[1mINFO[0m | scraper:235 | [32m进度: 75/120 (62.5%) - 成功: 61, 失败: 14 - 已用时: 448.6s - 预计剩余: 269.1s[0m
+2025-11-18 12:55:35,007 | [31m[1mERROR[0m | scraper:150 | [31m[76/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:55:37,240 | [33m[1mWARNING[0m | scraper:145 | [33m[77/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:37,600 | [33m[1mWARNING[0m | scraper:145 | [33m[77/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:39,072 | [33m[1mWARNING[0m | scraper:125 | [33m[77/120] 重试 3/3: https://www.hollandandbarrett.com/shop/product/revive-collagen-premium-liquid-marine-collagen-drink-sachets-8500mgs-60051714[0m
+2025-11-18 12:55:39,375 | [33m[1mWARNING[0m | scraper:145 | [33m[78/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:39,750 | [33m[1mWARNING[0m | scraper:145 | [33m[78/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:40,019 | [32m[1mINFO[0m | scraper:129 | [32m[79/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-zinc-25mg-120-tablets-6100006797[0m
+2025-11-18 12:55:40,455 | [31m[1mERROR[0m | scraper:150 | [31m[78/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:55:40,584 | [32m[1mINFO[0m | scraper:136 | [32m[77/120] ✓ 完成: Premium Liquid Marine Collagen Drink 8,5[0m
+2025-11-18 12:55:44,967 | [32m[1mINFO[0m | scraper:129 | [32m[80/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-vegan-silica-complex-90-tablets-6100008841[0m
+2025-11-18 12:55:44,968 | [32m[1mINFO[0m | scraper:129 | [32m[81/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/botanycl-skinclear-elixir-vegan-capsules-60038286[0m
+2025-11-18 12:55:52,217 | [32m[1mINFO[0m | scraper:136 | [32m[81/120] ✓ 完成: SkinClear Elixir with Coconut Oil 60 Veg[0m
+2025-11-18 12:55:54,958 | [32m[1mINFO[0m | scraper:136 | [32m[80/120] ✓ 完成: Vegan Silica Complex 90 Tablets[0m
+2025-11-18 12:55:54,960 | [32m[1mINFO[0m | scraper:235 | [32m进度: 80/120 (66.7%) - 成功: 63, 失败: 17 - 已用时: 468.5s - 预计剩余: 234.3s[0m
+2025-11-18 12:55:55,906 | [32m[1mINFO[0m | scraper:136 | [32m[79/120] ✓ 完成: Zinc 25mg 120 Tablets[0m
+2025-11-18 12:55:58,674 | [33m[1mWARNING[0m | scraper:145 | [33m[82/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:55:58,801 | [33m[1mWARNING[0m | scraper:145 | [33m[83/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:01,703 | [33m[1mWARNING[0m | scraper:145 | [33m[84/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:03,342 | [33m[1mWARNING[0m | scraper:145 | [33m[83/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:03,967 | [33m[1mWARNING[0m | scraper:145 | [33m[82/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:05,569 | [33m[1mWARNING[0m | scraper:145 | [33m[84/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:05,724 | [33m[1mWARNING[0m | scraper:125 | [33m[82/120] 重试 3/3: https://www.hollandandbarrett.com/shop/product/h-b-ultra-woman-30-6100005226[0m
+2025-11-18 12:56:08,531 | [31m[1mERROR[0m | scraper:150 | [31m[83/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:56:08,998 | [31m[1mERROR[0m | scraper:150 | [31m[84/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:56:11,468 | [33m[1mWARNING[0m | scraper:145 | [33m[86/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:11,887 | [33m[1mWARNING[0m | scraper:145 | [33m[86/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:11,887 | [33m[1mWARNING[0m | scraper:145 | [33m[85/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:12,686 | [32m[1mINFO[0m | scraper:136 | [32m[82/120] ✓ 完成: Ultra Woman 30 Tablets[0m
+2025-11-18 12:56:13,505 | [33m[1mWARNING[0m | scraper:125 | [33m[86/120] 重试 3/3: https://www.hollandandbarrett.com/shop/product/revive-collagen-premium-liquid-marine-collagen-drink-sachets-8500mgs-6100146761[0m
+2025-11-18 12:56:15,208 | [33m[1mWARNING[0m | scraper:145 | [33m[85/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:17,339 | [32m[1mINFO[0m | scraper:136 | [32m[86/120] ✓ 完成: Premium Liquid Marine Collagen Drink 8,5[0m
+2025-11-18 12:56:17,389 | [32m[1mINFO[0m | scraper:129 | [32m[87/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/dose-co-beauty-collagen-255g-60061953[0m
+2025-11-18 12:56:17,433 | [32m[1mINFO[0m | scraper:235 | [32m进度: 85/120 (70.8%) - 成功: 64, 失败: 21 - 已用时: 491.0s - 预计剩余: 202.2s[0m
+2025-11-18 12:56:20,387 | [31m[1mERROR[0m | scraper:150 | [31m[85/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:56:23,648 | [33m[1mWARNING[0m | scraper:145 | [33m[88/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:25,210 | [33m[1mWARNING[0m | scraper:125 | [33m[88/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/vitabiotics-perfectil-plus-skin-extra-support-tablets-60083260[0m
+2025-11-18 12:56:26,291 | [33m[1mWARNING[0m | scraper:145 | [33m[89/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:28,291 | [33m[1mWARNING[0m | scraper:125 | [33m[89/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/beauty-dropz-hair-hero-lliquid-drops-grape-flavour-60ml-6100006186[0m
+2025-11-18 12:56:35,278 | [32m[1mINFO[0m | scraper:136 | [32m[88/120] ✓ 完成: Perfectil Plus Skin Extra Support Tablet[0m
+2025-11-18 12:56:36,389 | [32m[1mINFO[0m | scraper:136 | [32m[87/120] ✓ 完成: Beauty Collagen 255g[0m
+2025-11-18 12:56:37,051 | [32m[1mINFO[0m | scraper:136 | [32m[89/120] ✓ 完成: Hair Hero Edible Skincare Llquid Drops G[0m
+2025-11-18 12:56:40,106 | [32m[1mINFO[0m | scraper:129 | [32m[90/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/vitabiotics-perfectil-platinum-collagen-skin-drink-60012051[0m
+2025-11-18 12:56:40,997 | [32m[1mINFO[0m | scraper:129 | [32m[91/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-vitamin-e-400iu-90-capsules-6100006808[0m
+2025-11-18 12:56:42,503 | [32m[1mINFO[0m | scraper:129 | [32m[92/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/together-health-whole-vitamins-beautiful-capsules-60007192[0m
+2025-11-18 12:56:47,875 | [32m[1mINFO[0m | scraper:136 | [32m[90/120] ✓ 完成: Perfectil Platinum Collagen Skin Drink 1[0m
+2025-11-18 12:56:47,876 | [32m[1mINFO[0m | scraper:235 | [32m进度: 90/120 (75.0%) - 成功: 68, 失败: 22 - 已用时: 521.5s - 预计剩余: 173.8s[0m
+2025-11-18 12:56:51,021 | [32m[1mINFO[0m | scraper:136 | [32m[92/120] ✓ 完成: Beautiful 60 Capsules[0m
+2025-11-18 12:56:52,208 | [33m[1mWARNING[0m | scraper:145 | [33m[93/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:52,564 | [33m[1mWARNING[0m | scraper:145 | [33m[93/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:52,922 | [31m[1mERROR[0m | scraper:150 | [31m[93/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:56:53,768 | [32m[1mINFO[0m | scraper:136 | [32m[91/120] ✓ 完成: Vitamin E 400iu 90 Capsules[0m
+2025-11-18 12:56:55,261 | [33m[1mWARNING[0m | scraper:145 | [33m[94/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:55,817 | [33m[1mWARNING[0m | scraper:145 | [33m[95/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:56,199 | [33m[1mWARNING[0m | scraper:145 | [33m[95/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:56,233 | [33m[1mWARNING[0m | scraper:145 | [33m[96/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:56:56,977 | [33m[1mWARNING[0m | scraper:125 | [33m[94/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/holland-barrett-high-strength-hyaluronic-acid-50mg-30-tablets-6100008956[0m
+2025-11-18 12:56:58,168 | [33m[1mWARNING[0m | scraper:125 | [33m[95/120] 重试 3/3: https://www.hollandandbarrett.com/shop/product/yourzooki-marine-collagen-mango-peach-food-supplement-15ml-sachet-60062793[0m
+2025-11-18 12:56:58,189 | [33m[1mWARNING[0m | scraper:125 | [33m[96/120] 重试 2/3: https://www.hollandandbarrett.com/shop/product/wild-nutrition-zinc-plus-blended-with-vitamins-b1-b2-b6-30-capsules-6100005097[0m
+2025-11-18 12:57:13,270 | [32m[1mINFO[0m | scraper:136 | [32m[96/120] ✓ 完成: Zinc Plus Blended with Vitamins B1, B2 &[0m
+2025-11-18 12:57:16,588 | [33m[1mWARNING[0m | scraper:145 | [33m[97/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:57:16,965 | [33m[1mWARNING[0m | scraper:145 | [33m[97/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 12:57:20,344 | [31m[1mERROR[0m | scraper:150 | [31m[97/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 12:57:20,349 | [32m[1mINFO[0m | scraper:235 | [32m进度: 95/120 (79.2%) - 成功: 71, 失败: 24 - 已用时: 553.9s - 预计剩余: 145.8s[0m
+2025-11-18 12:57:21,155 | [32m[1mINFO[0m | scraper:136 | [32m[94/120] ✓ 完成: High Strength Hyaluronic Acid 50mg 30 Ta[0m
+2025-11-18 12:57:25,561 | [32m[1mINFO[0m | scraper:136 | [32m[95/120] ✓ 完成: Marine Collagen 5,000mg, Mango Peach Fla[0m
+2025-11-18 12:57:26,881 | [32m[1mINFO[0m | scraper:129 | [32m[99/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/dose-co-pure-collagen-283g-60061949[0m
+2025-11-18 12:57:27,257 | [32m[1mINFO[0m | scraper:129 | [32m[98/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-high-strength-silica-complex-tablets-6100127058[0m
+2025-11-18 12:57:27,391 | [32m[1mINFO[0m | scraper:136 | [32m[99/120] ✓ 完成: Pure Collagen 283g[0m
+2025-11-18 12:57:27,392 | [32m[1mINFO[0m | scraper:136 | [32m[98/120] ✓ 完成: Vegan Silica Complex 180 Tablets[0m
+2025-11-18 12:59:56,711 | [32m[1mINFO[0m | scraper:186 | [32m开始并行爬取 120 个项目
+  - 线程数: 8
+  - 重试次数: 2
+  - 请求延迟: 0.5-1.5秒[0m
+2025-11-18 12:59:58,781 | [32m[1mINFO[0m | scraper:129 | [32m[5/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/hairburst-chewable-heart-hair-vitamins-1-month-supply-60010813[0m
+2025-11-18 12:59:59,020 | [32m[1mINFO[0m | scraper:129 | [32m[4/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-nails-formula-90-tablets-6100008960[0m
+2025-11-18 13:00:00,641 | [33m[1mWARNING[0m | scraper:145 | [33m[8/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:00,665 | [33m[1mWARNING[0m | scraper:145 | [33m[7/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:00,688 | [33m[1mWARNING[0m | scraper:145 | [33m[3/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:00,983 | [33m[1mWARNING[0m | scraper:145 | [33m[6/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:01,111 | [33m[1mWARNING[0m | scraper:145 | [33m[1/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:01,409 | [33m[1mWARNING[0m | scraper:145 | [33m[2/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:02,109 | [33m[1mWARNING[0m | scraper:125 | [33m[7/120] 重试 2/2: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-tablets-1000ug-6100130004[0m
+2025-11-18 13:00:03,948 | [31m[1mERROR[0m | scraper:150 | [31m[3/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:03,951 | [31m[1mERROR[0m | scraper:150 | [31m[8/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:04,244 | [31m[1mERROR[0m | scraper:150 | [31m[6/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:04,694 | [31m[1mERROR[0m | scraper:150 | [31m[2/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:04,893 | [31m[1mERROR[0m | scraper:150 | [31m[1/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:04,894 | [32m[1mINFO[0m | scraper:235 | [32m进度: 5/120 (4.2%) - 成功: 0, 失败: 5 - 已用时: 8.2s - 预计剩余: 188.2s[0m
+2025-11-18 13:00:06,047 | [32m[1mINFO[0m | scraper:129 | [32m[10/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-tablets-1000ug-6100130003[0m
+2025-11-18 13:00:07,766 | [33m[1mWARNING[0m | scraper:145 | [33m[9/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:07,984 | [33m[1mWARNING[0m | scraper:145 | [33m[11/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:09,083 | [33m[1mWARNING[0m | scraper:125 | [33m[9/120] 重试 2/2: https://www.hollandandbarrett.com/shop/product/holland-barrett-hair-vitamin-pineapple-flavour-60-gummies-6100008620[0m
+2025-11-18 13:00:09,281 | [33m[1mWARNING[0m | scraper:145 | [33m[13/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:09,671 | [33m[1mWARNING[0m | scraper:145 | [33m[12/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:10,986 | [33m[1mWARNING[0m | scraper:125 | [33m[12/120] 重试 2/2: https://www.hollandandbarrett.com/shop/product/holland-barrett-ultra-woman-daily-multi-caplets-6100005249[0m
+2025-11-18 13:00:11,239 | [31m[1mERROR[0m | scraper:150 | [31m[11/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:12,566 | [31m[1mERROR[0m | scraper:150 | [31m[13/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:13,688 | [32m[1mINFO[0m | scraper:129 | [32m[14/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-and-nails-vegan-pineapple-flavour-60-gummies-6100008618[0m
+2025-11-18 13:00:14,572 | [32m[1mINFO[0m | scraper:136 | [32m[9/120] ✓ 完成: Hair Vitamin Pineapple Flavour 60 Gummie[0m
+2025-11-18 13:00:14,576 | [32m[1mINFO[0m | scraper:136 | [32m[4/120] ✓ 完成: Skin, Hair & Nails Formula 90 Tablets[0m
+2025-11-18 13:00:14,576 | [32m[1mINFO[0m | scraper:136 | [32m[10/120] ✓ 完成: Biotin 1000ug 60 Tablets[0m
+2025-11-18 13:00:14,577 | [32m[1mINFO[0m | scraper:136 | [32m[7/120] ✓ 完成: Biotin 1000ug 120 Tablets[0m
+2025-11-18 13:00:14,577 | [32m[1mINFO[0m | scraper:136 | [32m[5/120] ✓ 完成: Chewable Hair Vitamins 30 Day Supply 60 [0m
+2025-11-18 13:00:14,577 | [32m[1mINFO[0m | scraper:136 | [32m[14/120] ✓ 完成: Skin Hair And Nails Vegan Pineapple Flav[0m
+2025-11-18 13:00:15,895 | [32m[1mINFO[0m | scraper:136 | [32m[12/120] ✓ 完成: Ultra Woman 90 Tablets[0m
+2025-11-18 13:00:16,198 | [33m[1mWARNING[0m | scraper:145 | [33m[16/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:16,461 | [33m[1mWARNING[0m | scraper:145 | [33m[19/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:17,539 | [33m[1mWARNING[0m | scraper:145 | [33m[15/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:18,561 | [33m[1mWARNING[0m | scraper:145 | [33m[17/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:18,589 | [33m[1mWARNING[0m | scraper:145 | [33m[21/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:18,694 | [33m[1mWARNING[0m | scraper:145 | [33m[20/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:19,281 | [33m[1mWARNING[0m | scraper:145 | [33m[18/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:19,774 | [31m[1mERROR[0m | scraper:150 | [31m[16/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:20,074 | [31m[1mERROR[0m | scraper:150 | [31m[19/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:20,249 | [33m[1mWARNING[0m | scraper:145 | [33m[22/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:20,600 | [33m[1mWARNING[0m | scraper:125 | [33m[18/120] 重试 2/2: https://www.hollandandbarrett.com/shop/product/solgar-skin-nails-and-hair-formula-tablets-60001411[0m
+2025-11-18 13:00:20,813 | [31m[1mERROR[0m | scraper:150 | [31m[15/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:21,825 | [31m[1mERROR[0m | scraper:150 | [31m[21/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:22,178 | [31m[1mERROR[0m | scraper:150 | [31m[17/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:22,298 | [31m[1mERROR[0m | scraper:150 | [31m[20/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:23,507 | [32m[1mINFO[0m | scraper:129 | [32m[25/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/wild-nutrition-complete-beauty-support-60-capsules-6100006183[0m
+2025-11-18 13:00:23,851 | [31m[1mERROR[0m | scraper:150 | [31m[22/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:24,199 | [33m[1mWARNING[0m | scraper:145 | [33m[23/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:25,068 | [33m[1mWARNING[0m | scraper:145 | [33m[24/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:26,011 | [33m[1mWARNING[0m | scraper:145 | [33m[29/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:26,018 | [33m[1mWARNING[0m | scraper:145 | [33m[26/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:26,018 | [31m[1mERROR[0m | scraper:150 | [31m[23/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:26,027 | [33m[1mWARNING[0m | scraper:145 | [33m[28/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:26,027 | [31m[1mERROR[0m | scraper:150 | [31m[24/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:26,027 | [33m[1mWARNING[0m | scraper:145 | [33m[27/120] 失败 (尝试 1/2): Could not reach host. Are you offline?[0m
+2025-11-18 13:00:26,323 | [31m[1mERROR[0m | scraper:150 | [31m[29/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:26,713 | [31m[1mERROR[0m | scraper:150 | [31m[28/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+2025-11-18 13:00:27,346 | [33m[1mWARNING[0m | scraper:125 | [33m[27/120] 重试 2/2: https://www.hollandandbarrett.com/shop/product/viviscal-thickening-shampoo-250ml-60063680[0m
+2025-11-18 13:00:27,483 | [31m[1mERROR[0m | scraper:150 | [31m[26/120] ✗ 最终失败: Message: Bad Gateway
+[0m
+2025-11-18 13:00:27,483 | [32m[1mINFO[0m | scraper:136 | [32m[27/120] ✓ 完成: Thickening Shampoo 250ml[0m
+2025-11-18 13:00:27,485 | [32m[1mINFO[0m | scraper:136 | [32m[18/120] ✓ 完成: Skin, Nails and Hair Formula 60 Tablets[0m
+2025-11-18 13:00:27,485 | [32m[1mINFO[0m | scraper:136 | [32m[25/120] ✓ 完成: Complete Beauty Support 60 Capsules[0m
+2025-11-18 13:07:38,269 | [32m[1mINFO[0m | scraper:198 | [32m开始并行爬取 120 个项目
+  - 线程数: 3
+  - 重试次数: 3
+  - 请求延迟: 2-4秒[0m
+2025-11-18 13:07:41,908 | [32m[1mINFO[0m | scraper:133 | [32m[3/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/viviscal-healthy-hair-vitamins-30-tablets-6100000423[0m
+2025-11-18 13:07:42,575 | [32m[1mINFO[0m | scraper:133 | [32m[2/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/vitabiotics-perfectil-tablets-60013790[0m
+2025-11-18 13:07:42,749 | [32m[1mINFO[0m | scraper:133 | [32m[1/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/starpowa-hair-skin-and-nail-gummies-60036102[0m
+2025-11-18 13:07:52,901 | [32m[1mINFO[0m | scraper:140 | [32m[3/120] ✓ 完成: Healthy Hair Vitamins 180 Tablets[0m
+2025-11-18 13:07:53,624 | [32m[1mINFO[0m | scraper:140 | [32m[2/120] ✓ 完成: Perfectil 30 Tablets[0m
+2025-11-18 13:07:54,241 | [32m[1mINFO[0m | scraper:140 | [32m[1/120] ✓ 完成: Hair, Skin and Nail 60 Gummies[0m
+2025-11-18 13:07:57,412 | [32m[1mINFO[0m | scraper:133 | [32m[5/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/hairburst-chewable-heart-hair-vitamins-1-month-supply-60010813[0m
+2025-11-18 13:07:57,921 | [32m[1mINFO[0m | scraper:133 | [32m[4/120] 开始爬取: https://www.hollandandbarrett.com/shop/product/holland-barrett-skin-hair-nails-formula-90-tablets-6100008960[0m
+2025-11-18 13:08:00,778 | [33m[1mWARNING[0m | scraper:149 | [33m[6/120] 失败 (尝试 1/3): Could not reach host. Are you offline?[0m
+2025-11-18 13:08:04,435 | [33m[1mWARNING[0m | scraper:149 | [33m[6/120] 失败 (尝试 2/3): Could not reach host. Are you offline?[0m
+2025-11-18 13:08:05,764 | [33m[1mWARNING[0m | scraper:129 | [33m[6/120] 重试 3/3: https://www.hollandandbarrett.com/shop/product/holland-barrett-biotin-hair-high-strength-complex-30-capsules-6100008623[0m
+2025-11-18 13:08:10,605 | [32m[1mINFO[0m | scraper:140 | [32m[4/120] ✓ 完成: Skin, Hair & Nails Formula 90 Tablets[0m
