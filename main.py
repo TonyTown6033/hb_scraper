@@ -60,7 +60,7 @@ def scrape_product_list(driver, url):
     # 等待产品卡片加载
     try:
         WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, '[data-testid="product-card"]'))
+            EC.presence_of_element_located((By.CSS_SELECTOR, '[data-test="product-card"]'))
         )
         print("✓ 产品列表已加载")
     except:
@@ -68,7 +68,7 @@ def scrape_product_list(driver, url):
         return []
 
     # 找到所有产品卡片
-    product_cards = driver.find_elements(By.CSS_SELECTOR, '[data-testid="product-card"]')
+    product_cards = driver.find_elements(By.CSS_SELECTOR, '[data-test="product-card"]')
     print(f"✓ 找到 {len(product_cards)} 个产品")
 
     products = []
@@ -83,28 +83,28 @@ def scrape_product_list(driver, url):
 
             # 产品品牌
             try:
-                brand_element = card.find_element(By.CSS_SELECTOR, ".ProductCard-module_productBrand__-rFtT")
+                brand_element = card.find_element(By.CSS_SELECTOR, '[data-test="product-card-brand-name"]')
                 product["brand"] = brand_element.text.strip()
             except:
                 product["brand"] = ""
 
             # 产品名称
             try:
-                title_element = card.find_element(By.CSS_SELECTOR, ".ProductCard-module_title__ytKYE")
+                title_element = card.find_element(By.CSS_SELECTOR, '[data-test="product-card-title"]')
                 product["name"] = title_element.text.strip()
             except:
                 product["name"] = ""
 
             # 产品价格
             try:
-                price_element = card.find_element(By.CSS_SELECTOR, ".MppProductCardPrice-module_price__bold__BpYBE")
+                price_element = card.find_element(By.CSS_SELECTOR, '[data-test="product-card-price"]')
                 product["price"] = price_element.text.strip()
             except:
                 product["price"] = ""
 
             # 产品图片
             try:
-                image_element = card.find_element(By.CSS_SELECTOR, ".ProductCard-module_productImage__9bfwO")
+                image_element = card.find_element(By.CSS_SELECTOR, '[data-test="product-image"]')
                 product["image"] = image_element.get_attribute("src")
             except:
                 product["image"] = ""
