@@ -33,15 +33,10 @@ class MultiPageScraper:
             bool: 是否有下一页
         """
         try:
-            # 查找分页导航
-            pagination = self.driver.find_elements(By.CSS_SELECTOR, 'nav[aria-label="Pagination"]')
-            if not pagination:
-                return False
-
-            # 查找"下一页"按钮
+            # 查找"下一页"按钮 - 使用 data-test 属性
             next_buttons = self.driver.find_elements(
                 By.CSS_SELECTOR,
-                'a[aria-label="Go to next page"], button[aria-label="Go to next page"]'
+                '[data-test="button-next"]'
             )
 
             if not next_buttons:
@@ -52,7 +47,7 @@ class MultiPageScraper:
             is_disabled = (
                 next_button.get_attribute("disabled") == "true" or
                 next_button.get_attribute("aria-disabled") == "true" or
-                "disabled" in next_button.get_attribute("class") or ""
+                "disabled" in (next_button.get_attribute("class") or "")
             )
 
             return not is_disabled
@@ -91,6 +86,36 @@ class MultiPageScraper:
             print(f"  → 获取页码时出错: {e}")
             return 1
 
+    def _handle_cookie_popup(self):
+        """处理可能出现的 Cookie 弹窗"""
+        try:
+            # 尝试查找并关闭 Cookie 弹窗
+            cookie_selectors = [
+                "//button[contains(text(), 'Yes I Accept')]",
+                "//button[contains(text(), 'Accept')]",
+                "//button[@id='onetrust-accept-btn-handler']",
+                "#onetrust-accept-btn-handler",
+            ]
+            
+            for selector in cookie_selectors:
+                try:
+                    if selector.startswith("//"):
+                        button = self.driver.find_element(By.XPATH, selector)
+                    else:
+                        button = self.driver.find_element(By.CSS_SELECTOR, selector)
+                    
+                    if button.is_displayed():
+                        button.click()
+                        print("  → 已关闭 Cookie 弹窗")
+                        time.sleep(1)
+                        return True
+                except:
+                    continue
+            
+            return False
+        except Exception as e:
+            return False
+
     def go_to_next_page(self) -> bool:
         """
         跳转到下一页
@@ -105,26 +130,35 @@ class MultiPageScraper:
             # 获取当前页码
             current_page = self.get_current_page_number()
 
-            # 点击"下一页"按钮
+            # 处理可能出现的 Cookie 弹窗
+            self._handle_cookie_popup()
+
+            # 点击"下一页"按钮 - 使用 data-test 属性
             next_button = self.driver.find_element(
                 By.CSS_SELECTOR,
-                'a[aria-label="Go to next page"], button[aria-label="Go to next page"]'
+                '[data-test="button-next"]'
             )
 
             # 滚动到按钮位置
             self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", next_button)
             time.sleep(1)
 
-            # 点击
-            next_button.click()
+            # 使用 JavaScript 点击(避免被遮挡)
+            try:
+                next_button.click()
+            except Exception as click_error:
+                # 如果普通点击失败,使用 JavaScript 点击
+                print("  → 普通点击失败,尝试 JavaScript 点击...")
+                self.driver.execute_script("arguments[0].click();", next_button)
+            
             print(f"\n→ 点击下一页按钮...")
 
             # 等待页面加载
             time.sleep(3)
 
-            # 等待产品卡片重新加载
+            # 等待产品卡片重新加载 - 使用正确的选择器
             WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, '[data-testid="product-card"]'))
+                EC.presence_of_element_located((By.CSS_SELECTOR, '[data-test="product-card"]'))
             )
 
             # 验证是否成功跳转
