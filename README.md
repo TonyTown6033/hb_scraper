@@ -18,6 +18,25 @@
 - 📊 **数据导出** - 导出为 CSV 格式（支持中文）
 - 🎯 **稳定可靠** - 基于 JSON 提取，避免 DOM 变化
 
+## 🖥️ 服务器部署（Ubuntu CLI）
+
+在没有 GUI 的 Ubuntu 服务器上运行？查看快速开始指南：
+
+```bash
+# 一键安装所有依赖（Chrome + ChromeDriver）
+bash install_chromedriver.sh
+
+# 测试配置
+python test_headless_local.py --local
+```
+
+📖 详细文档：
+- **[SERVER_QUICKSTART.md](SERVER_QUICKSTART.md)** - 5 分钟快速开始
+- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - 故障排除指南
+- **[docs/SERVER_DEPLOYMENT.md](docs/SERVER_DEPLOYMENT.md)** - 完整部署文档
+
+---
+
 ## 🚀 快速开始
 
 ```bash

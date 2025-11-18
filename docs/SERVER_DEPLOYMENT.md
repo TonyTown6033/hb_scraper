@@ -191,7 +191,45 @@ uv run python main.py
 
 ## 5. 测试配置
 
-### 5.1 创建测试脚本
+### 5.1 快速诊断（如果遇到问题）
+
+```bash
+# 运行诊断脚本，检查环境配置
+python diagnose_server.py
+```
+
+### 5.2 安装 ChromeDriver（推荐：使用自动脚本）
+
+如果 ChromeDriver 自动下载太慢或失败，使用以下方法手动安装：
+
+```bash
+# 方法 1: 使用自动安装脚本（推荐）
+bash install_chromedriver.sh
+
+# 方法 2: 手动安装
+# 获取 Chrome 主版本号
+CHROME_MAJOR_VERSION=$(google-chrome --version | grep -oP '\d+' | head -1)
+
+# 获取对应的 ChromeDriver 版本（Chrome 115+）
+CHROMEDRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_$CHROME_MAJOR_VERSION")
+
+# 下载（Chrome 115+）
+wget "https://storage.googleapis.com/chrome-for-testing-public/$CHROMEDRIVER_VERSION/linux64/chromedriver-linux64.zip"
+
+# 或者使用旧版 API（Chrome 114 及以下）
+# CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAJOR_VERSION")
+# wget "https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
+
+# 解压并安装
+unzip chromedriver-linux64.zip
+sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
+sudo chmod +x /usr/local/bin/chromedriver
+
+# 验证
+chromedriver --version
+```
+
+### 5.3 创建测试脚本
 
 ```bash
 # 创建一个简单的测试脚本
@@ -222,7 +260,17 @@ EOF
 uv run python test_headless.py
 ```
 
-### 5.2 验证输出
+### 5.4 运行测试
+
+```bash
+# 方法 1: 使用本地 ChromeDriver（推荐，避免下载问题）
+python test_headless_local.py --local
+
+# 方法 2: 使用自动下载（需要网络）
+python test_headless.py
+```
+
+### 5.5 验证输出
 
 如果看到类似以下输出，说明配置成功：
 ```
@@ -230,7 +278,69 @@ uv run python test_headless.py
 ✓ Headless 模式配置正确!
 ```
 
+### 5.6 如果测试失败
+
+```bash
+# 1. 运行完整诊断
+python diagnose_server.py
+
+# 2. 查看 ChromeDriver 辅助工具
+python utils/webdriver_helper.py
+
+# 3. 重新安装 ChromeDriver
+bash install_chromedriver.sh
+```
+
 ## 6. 常见问题与解决方案
+
+### 6.0 ChromeDriver 初始化卡住（最常见）
+
+**问题**: 运行测试时卡在 "初始化 ChromeDriver" 步骤
+
+**原因**:
+- webdriver-manager 需要从网络下载 ChromeDriver
+- 网络慢或被墙导致下载失败/超时
+
+**解决方案 1: 使用自动安装脚本（推荐）**
+```bash
+# 一键安装 ChromeDriver
+bash install_chromedriver.sh
+
+# 然后使用本地 ChromeDriver 测试
+python test_headless_local.py --local
+```
+
+**解决方案 2: 手动诊断和安装**
+```bash
+# 1. 运行诊断
+python diagnose_server.py
+
+# 2. 查看详细信息
+python utils/webdriver_helper.py
+
+# 3. 如果没有 ChromeDriver，手动安装
+bash install_chromedriver.sh
+```
+
+**解决方案 3: 配置代理（如果有）**
+```bash
+# 设置代理环境变量
+export HTTP_PROXY="http://proxy:port"
+export HTTPS_PROXY="http://proxy:port"
+
+# 然后重试
+python test_headless.py
+```
+
+**验证安装**
+```bash
+# 检查 ChromeDriver 是否已安装
+which chromedriver
+chromedriver --version
+
+# 检查 Chrome 版本是否匹配
+google-chrome --version
+```
 
 ### 6.1 Chrome 启动失败
 
