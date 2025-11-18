@@ -359,16 +359,62 @@ def main():
 
                 print(f"\n使用并行模式爬取 {max_products} 个产品，{max_workers} 个线程并发")
                 print(f"配置: {retry_times}次重试, {request_delay[0]}-{request_delay[1]}秒随机延迟")
+                print(f"💡 每100个产品自动写入CSV，避免内存占用过大")
                 print(f"{'=' * 60}")
 
-                # 使用并行爬取
+                # 定义CSV文件路径
+                final_output = "data/output/products_complete.csv"
+                fieldnames = [
+                    "产品名称", "产品亮点", "产品价格", "产品品牌",
+                    "产品图", "产品描述", "产品类型", "作用部位",
+                    "用法说明", "营养成分", "配料表", "URL"
+                ]
+
+                # 创建批次写入回调函数
+                def write_batch_to_csv(batch_products, batch_num):
+                    """将批次产品写入CSV"""
+                    from pathlib import Path
+                    output_path = Path(final_output)
+                    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+                    # 第一批写入时包含表头，后续批次追加
+                    mode = 'w' if batch_num == 1 else 'a'
+                    write_header = (batch_num == 1)
+
+                    with open(output_path, mode, newline="", encoding="utf-8-sig") as f:
+                        writer = csv.DictWriter(f, fieldnames=fieldnames)
+                        if write_header:
+                            writer.writeheader()
+
+                        for product in batch_products:
+                            row = {
+                                "产品名称": product.get("name", ""),
+                                "产品价格": product.get("price", ""),
+                                "产品亮点": product.get("highlights", ""),
+                                "用法说明": product.get("directions", ""),
+                                "产品图": product.get("image", ""),
+                                "产品类型": product_type,
+                                "作用部位": product.get("target_area", ""),
+                                "配料表": product.get("ingredients", ""),
+                                "产品品牌": product.get("brand", ""),
+                                "产品描述": product.get("description", ""),
+                                "营养成分": product.get("nutritional_info", ""),
+                                "URL": product.get("url", ""),
+                            }
+                            writer.writerow(row)
+
+                    print(f"✓ 批次 {batch_num} 已写入 {len(batch_products)} 个产品到 {final_output}")
+
+                # 使用并行爬取（带分批写入）
                 products = scrape_details_parallel(
                     products=products,
                     scrape_detail_func=scrape_product_detail,
                     max_workers=max_workers,
                     max_products=max_products,
                     retry_times=retry_times,
-                    request_delay=request_delay
+                    request_delay=request_delay,
+                    batch_size=100,  # 每100个产品写入一次
+                    batch_callback=write_batch_to_csv
                 )
             else:
                 # 顺序爬取（保留原有逻辑）
@@ -425,47 +471,54 @@ def main():
                     print(f"\n✗ {len(failed_products)} 个产品爬取失败，已记录到: {failed_file}")
                     print(f"  可使用 'uv run python scripts/retry_failed.py' 重新爬取")
 
-            # 保存完整数据到CSV
-            final_output = "data/output/products_complete.csv"
-            fieldnames = [
-                "产品名称",
-                "产品亮点",
-                "产品价格",
-                "产品品牌",
-                "产品图",
-                "产品描述",
-                "产品类型",
-                "作用部位",
-                "用法说明",
-                "营养成分",
-                "配料表",
-                "URL",
-            ]
+            # 保存完整数据到CSV（如果是并行模式且使用了分批写入，则跳过）
+            if parallel_mode != "2":  # 顺序模式需要保存
+                final_output = "data/output/products_complete.csv"
+                fieldnames = [
+                    "产品名称",
+                    "产品亮点",
+                    "产品价格",
+                    "产品品牌",
+                    "产品图",
+                    "产品描述",
+                    "产品类型",
+                    "作用部位",
+                    "用法说明",
+                    "营养成分",
+                    "配料表",
+                    "URL",
+                ]
 
-            with open(final_output, "w", newline="", encoding="utf-8-sig") as f:
-                writer = csv.DictWriter(f, fieldnames=fieldnames)
-                writer.writeheader()
+                with open(final_output, "w", newline="", encoding="utf-8-sig") as f:
+                    writer = csv.DictWriter(f, fieldnames=fieldnames)
+                    writer.writeheader()
 
-                for product in products[:max_products]:
-                    row = {
-                        "产品名称": product.get("name", ""),
-                        "产品价格": product.get("price", ""),
-                        "产品亮点": product.get("highlights", ""),
-                        "用法说明": product.get("directions", ""),
-                        "产品图": product.get("image", ""),
-                        "产品类型": product_type,
-                        "作用部位": product.get("target_area", ""),
-                        "配料表": product.get("ingredients", ""),
-                        "产品品牌": product.get("brand", ""),
-                        "产品描述": product.get("description", ""),
-                        "营养成分": product.get("nutritional_info", ""),
-                        "URL": product.get("url", ""),
-                    }
-                    writer.writerow(row)
+                    for product in products[:max_products]:
+                        row = {
+                            "产品名称": product.get("name", ""),
+                            "产品价格": product.get("price", ""),
+                            "产品亮点": product.get("highlights", ""),
+                            "用法说明": product.get("directions", ""),
+                            "产品图": product.get("image", ""),
+                            "产品类型": product_type,
+                            "作用部位": product.get("target_area", ""),
+                            "配料表": product.get("ingredients", ""),
+                            "产品品牌": product.get("brand", ""),
+                            "产品描述": product.get("description", ""),
+                            "营养成分": product.get("nutritional_info", ""),
+                            "URL": product.get("url", ""),
+                        }
+                        writer.writerow(row)
 
             print(f"\n{'=' * 60}")
-            print(f"✓ 完整数据已保存到: {final_output}")
-            print(f"✓ 共爬取 {max_products} 个产品的完整信息")
+            if parallel_mode == "2":
+                # 并行模式已经分批保存
+                print(f"✓ 所有数据已保存到: data/output/products_complete.csv")
+                print(f"✓ 共爬取 {len(products)} 个产品的完整信息")
+            else:
+                # 顺序模式最后保存
+                print(f"✓ 完整数据已保存到: data/output/products_complete.csv")
+                print(f"✓ 共爬取 {max_products} 个产品的完整信息")
             print(f"{'=' * 60}")
 
         translate_main()

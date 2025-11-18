@@ -178,7 +178,9 @@ class ParallelScraper:
         self,
         items: List[Dict],
         scrape_func: Callable,
-        max_items: int = None
+        max_items: int = None,
+        batch_size: int = None,
+        batch_callback: Callable = None
     ) -> List[Dict]:
         """
         并行爬取多个项目
@@ -187,6 +189,8 @@ class ParallelScraper:
             items: 要爬取的项目列表
             scrape_func: 单个项目的爬取函数，接收(driver, url)参数
             max_items: 最大爬取数量，None表示全部
+            batch_size: 分批大小，每爬取N个就调用回调函数，None表示不分批
+            batch_callback: 分批回调函数，接收(batch_results, batch_num)参数
 
         Returns:
             List[Dict]: 爬取后的数据列表
@@ -204,9 +208,11 @@ class ParallelScraper:
 
         start_time = time.time()
         results = []
+        batch_results = []  # 临时批次结果
         completed_count = 0
         success_count = 0
         failed_count = 0
+        batch_num = 0  # 当前批次号
 
         # 使用线程池并行执行
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
@@ -227,6 +233,7 @@ class ParallelScraper:
                 try:
                     result = future.result()
                     results.append(result)
+                    batch_results.append(result)  # 添加到批次结果
                     completed_count += 1
 
                     # 检查是否成功爬取到详情
@@ -237,6 +244,15 @@ class ParallelScraper:
                         success_count += 1
                     else:
                         failed_count += 1
+
+                    # 检查是否需要执行批次回调
+                    if batch_size and batch_callback and len(batch_results) >= batch_size:
+                        batch_num += 1
+                        self.logger.info(
+                            f"\n📦 批次 {batch_num}: 已完成 {len(batch_results)} 个产品，正在写入CSV..."
+                        )
+                        batch_callback(batch_results, batch_num)
+                        batch_results = []  # 清空批次结果
 
                     # 显示进度（每5个显示一次，避免刷屏）
                     if completed_count % 5 == 0 or completed_count == total_items:
@@ -255,6 +271,14 @@ class ParallelScraper:
                 except Exception as e:
                     self.logger.error(f"任务执行失败: {e}")
                     failed_count += 1
+
+            # 处理最后一批（如果有剩余）
+            if batch_size and batch_callback and batch_results:
+                batch_num += 1
+                self.logger.info(
+                    f"\n📦 批次 {batch_num} (最后一批): 已完成 {len(batch_results)} 个产品，正在写入CSV..."
+                )
+                batch_callback(batch_results, batch_num)
 
         elapsed = time.time() - start_time
         self.logger.info(
@@ -303,7 +327,9 @@ def scrape_details_parallel(
     max_products: int = None,
     retry_times: int = 3,
     request_delay: tuple = (2, 4),
-    enable_headless: bool = True
+    enable_headless: bool = True,
+    batch_size: int = None,
+    batch_callback: Callable = None
 ) -> List[Dict]:
     """
     并行爬取产品详情的便捷函数
@@ -316,6 +342,8 @@ def scrape_details_parallel(
         retry_times: 失败重试次数，默认3
         request_delay: 请求延迟范围(秒)，默认(2, 4)
         enable_headless: 是否启用无头模式
+        batch_size: 分批大小，每爬取N个就写入CSV，默认None（不分批）
+        batch_callback: 分批回调函数，接收(batch_results, batch_num)
 
     Returns:
         List[Dict]: 包含详情的产品列表
@@ -329,5 +357,7 @@ def scrape_details_parallel(
     return scraper.scrape_items_parallel(
         items=products,
         scrape_func=scrape_detail_func,
-        max_items=max_products
+        max_items=max_products,
+        batch_size=batch_size,
+        batch_callback=batch_callback
     )

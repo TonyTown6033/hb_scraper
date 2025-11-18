@@ -215,3 +215,183 @@
 [31m[26/120] ✗ 最终失败: Message: Bad Gateway
 [0m
 
+2025-11-18 13:09:26,514 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[17/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:11:45,587 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[42/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:11:49,327 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[43/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:12:14,137 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[48/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:12:16,236 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[49/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:12:17,420 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[50/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:14:07,764 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[65/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:14:10,727 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[67/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:14:20,749 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[68/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:14:24,734 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[69/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:14:53,768 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[74/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:15:00,607 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[75/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:15:06,595 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[76/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:15:12,423 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[77/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:15:14,711 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[78/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:15:19,566 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[79/120] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:21:00,593 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[2/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:21:16,285 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[5/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:21:51,262 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[10/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:21:52,963 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[11/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:22:07,858 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[12/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:22:18,037 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[14/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:23:13,161 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[22/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:23:16,649 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[23/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:24:21,347 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[33/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:26:14,962 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[49/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:26:19,955 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[51/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:26:26,473 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[52/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:27:03,610 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[59/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:30:15,879 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[90/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:30:29,897 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[92/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:30:37,333 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[93/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:31:06,272 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[97/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:31:15,354 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[99/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:32:18,101 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[108/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:32:57,207 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[113/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:33:12,420 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[115/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:33:23,161 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[116/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:33:26,383 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[118/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:34:45,144 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[131/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:34:47,149 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[133/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:34:50,139 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[134/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:34:50,489 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[132/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:34:53,636 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[135/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:35:00,635 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[137/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:35:09,013 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[139/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:35:09,784 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[140/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:35:16,054 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[141/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:35:19,053 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[142/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:36:08,429 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[149/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:36:21,798 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[150/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:37:01,159 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[156/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:37:17,016 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[157/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:38:32,266 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[170/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:38:39,616 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[171/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:38:46,956 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[173/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:38:48,948 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[172/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:39:18,596 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[176/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:40:16,065 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[185/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+
+2025-11-18 13:40:26,039 | [31m[1mERROR[0m | scraper:154 | _scrape_single_item
+[31m[186/191] ✗ 最终失败: Could not reach host. Are you offline?[0m
+

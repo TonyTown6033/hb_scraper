@@ -19,3 +19,10 @@ data/output/*.csv
 
 # MacOS
 .DS_Store
+
+# 环境变量（包含敏感信息）
+.env
+
+# 日志文件
+*.log
+logs/*.log

@@ -6,10 +6,11 @@
 
 - 🕷️ **智能爬虫** - 自动爬取产品列表和详情
 - ⚡ **多线程并发** - 支持3-10个线程并行爬取（3-5倍加速）
+- 📦 **分批写入** - 每100个产品自动写入CSV，避免内存占用过大 ⭐ 新增
 - 📄 **多页爬取** - 支持分页爬取，自动翻页获取所有产品
 - 💾 **断点续传** - 支持中断后继续爬取，不丢失进度
 - 🔄 **自动重试** - 失败自动重试，提高成功率
-- 📋 **失败记录** - 自动记录失败产品，支持后续重爬 ⭐ 新增
+- 📋 **失败记录** - 自动记录失败产品，支持后续重爬
 - 📝 **日志系统** - 完善的日志记录，方便调试和追踪
 - 🌍 **自动翻译** - 集成 OpenAI API 翻译为中文
 - 🖼️ **图片处理** - 自动处理图片为 800x400 横条形白底居中
@@ -25,6 +26,9 @@ uv run python main.py
 
 # 重新爬取失败的产品 ⭐ 新增
 uv run python scripts/retry_failed.py
+
+# 检查图床服务状态 ⭐ 新增
+uv run python scripts/check_imagebed.py
 
 # 自动测试找最佳线程数
 uv run python scripts/find_optimal_threads.py
@@ -53,6 +57,17 @@ python scripts/view_logs.py list
 - 顺序模式: ~200秒
 - 并行模式(3线程): ~70秒 ⚡ 快3倍
 - 并行模式(5线程): ~45秒 ⚡ 快4.5倍
+
+### ⚠️ 图床服务状态
+
+**当前图床不可用**（502 Bad Gateway）
+
+如需使用图片上传功能，请：
+1. 运行检查脚本：`uv run python scripts/check_imagebed.py`
+2. 查看配置指南：[图床配置指南](docs/IMAGEBED_SETUP.md)
+3. 选择替代方案（免费图床/自建/云存储）
+
+**临时方案**：如果暂时不需要图片处理，可以注释掉 `main.py` 中的图片处理代码。
 
 ### 📋 失败重爬功能
 
@@ -124,11 +139,14 @@ hb_scraper/
 
 ### 快速入门
 - [快速启动指南](QUICKSTART.md)
-- [多WebDriver并发快速入门](docs/QUICK_START_PARALLEL.md) ⭐ 新增
+- [多线程并发快速入门](docs/QUICK_START_PARALLEL.md)
+- [失败产品重爬指南](docs/RETRY_FAILED.md)
+- [分批写入CSV说明](docs/BATCH_WRITE.md)
+- [图床配置指南](docs/IMAGEBED_SETUP.md) ⭐ 新增
 
 ### 功能详解
-- [多WebDriver并发详解](docs/PARALLEL_SCRAPING.md) ⭐ 新增
-- [WebDriver架构说明](docs/WEBDRIVER_ARCHITECTURE.md) ⭐ 新增
+- [多线程并发详解](docs/PARALLEL_SCRAPING.md)
+- [WebDriver架构说明](docs/WEBDRIVER_ARCHITECTURE.md)
 - [日志系统说明](docs/日志系统说明.md)
 - [多页爬取说明](docs/多页爬取说明.md)
 - [翻译工具说明](docs/翻译工具说明.md)
